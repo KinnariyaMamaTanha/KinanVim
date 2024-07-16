@@ -1,0 +1,65 @@
+snippet document "document" bA
+\documentclass{$1}
+\title{$2}
+\author{$3}
+\date{\today}
+\begin{document}
+\maketitle
+
+$0
+
+\end{document}
+endsnippet
+
+snippet sec "section" bA
+\section{$1}
+$0
+endsnippet
+
+snippet subsec "subsection" bA
+\subsection{$1}
+$0
+endsnippet
+
+snippet beg "environment" bA
+\begin{$1}
+    $0
+\end{$1}
+endsnippet
+
+snippet package "import package" bA
+\usepackage{$1}
+$0
+endsnippet
+
+snippet item "items" bA
+\begin{itemize}
+    \item $1
+    \item $2
+\end{itemize}
+$0
+endsnippet
+
+snippet align "align" bA
+\begin{align}
+    $1
+\end{align}
+$0
+endsnippet
+
+snippet bmatrix "bmatrix" bA
+\begin{bmatrix}
+    $1
+\end{matrix}
+$0
+endsnippet
+
+snippet xelatex "using xelatex" bA
+%! TeX program = xelatex
+
+endsnippet
+
+snippet page "new page" bA
+\newpage
+$0
+endsnippet

@@ -1,0 +1,48 @@
+snippet header "basic headers"
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+
+endsnippet
+
+snippet stl "stl lib headers"
+#include <algorithm>
+#include <queue>
+#include <stack>
+#include <map>
+#include <vector>
+#include <deque>
+#include <set>
+#include <list>
+
+endsnippet
+
+snippet class "class definition" bA
+class ${1:class-name} {
+private:
+  $0
+public:
+  ${1}();
+  ~${1}();
+};
+endsnippet
+
+snippet struct "struct definition" bA
+struct ${1:struct-name} {
+  $0
+  $1();
+};
+endsnippet
+
+snippet std "using namespace std"
+using namespace std;
+$0
+endsnippet
+
+snippet head "file head" bA
+// /usr/bin/g++
+// --- coding: utf-8 ---
+// File Name:     `!v expand("%")`
+// Author:        Kinnariya
+// Created Time:  `!v strftime("%Y-%m-%d  %H:%M:%S")`
+endsnippet

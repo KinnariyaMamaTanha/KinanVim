@@ -1,0 +1,68 @@
+# iAwrb 为snippet的选项。
+#
+# - i 表示片段可在句中被触发。默认是只有在前面有多个空格或者在行首时才会被触发。
+#
+# - A 表示片段会被自动触发
+#
+# - w 表示片段只会在关键词为单独单词的情况下被触发。若关键词为 mk, 那么只有在 html mk 时会被触发，htmlmk 不会被触发。
+#
+# - r 表示关键词使用正则表达式。正则表达式必须用 两个引号' '包围。比如 \'([1-9])day\'。
+#
+# - b 表示只有在一行的开头才会被触发。
+
+# numbered list 
+snippet nlist "numbered list with 3 rows" b
+1. $1
+2. $2
+3. $3
+$0
+endsnippet
+
+snippet list "unnumbered list with 3 rows" b
+- $1
+- $2
+- $3
+$0
+endsnippet
+
+snippet task "tasks" b
+- [ ] $1
+- [ ] $2
+- [ ] $3
+$0
+endsnippet
+
+snippet head "head" bA
+---
+title: ${1:title}
+layout: post
+guid: `!p
+import uuid
+if not snip.c:
+  guid = uuid.uuid4().get_hex()
+snip.rv = guid
+`
+date: `!v strftime("%Y-%m-%d %H:%M:%S")`
+tags:
+  - ${4}
+---
+
+$0
+endsnippet
+
+snippet img "image" b
+![$1]($2)
+$0
+endsnippet
+
+# markdown latex
+snippet math "math quote" b
+$$
+$0
+$$
+endsnippet
+snippet align "aligns" b
+\begin{align}
+    $0
+\end{align}
+endsnippet

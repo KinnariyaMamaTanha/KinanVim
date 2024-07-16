@@ -1,0 +1,32 @@
+snippet class "class definition"
+class ${1:class-name}:
+    def __init__(self) -> None:
+	    ${2:pass}
+$0
+endsnippet
+
+snippet np "import numpy"
+import numpy as np
+endsnippet
+
+snippet torch "import torch"
+import torch
+endsnippet
+
+snippet pd "import pandas"
+import pandas as pd
+endsnippet
+
+snippet ml "import machine learning packages"
+import numpy as np
+import torch
+import pandas as pd
+endsnippet
+
+snippet head "file head" bA
+# ~/anaconda/bin/python
+# --- coding: utf-8 ---
+# File Name:     `!v expand("%")`
+# Author:        Kinnariya
+# Created Time:  `!v strftime("%Y-%m-%d  %H:%M:%S")`
+endsnippet

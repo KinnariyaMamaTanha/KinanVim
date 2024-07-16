@@ -1,0 +1,333 @@
+{
+    "cursors.cancelKey": "<leader><cr>",
+    "cursors.nextKey": "<C-n>",
+    "cursors.previousKey": "<C-p>",
+    "notification.winblend": 20,
+    "languageserver": {
+        "asm-lsp": {
+            "command": "asm-lsp",
+            "filetypes": [
+                "asm",
+                "s",
+                "S"
+            ]
+        },
+        "cmake": {
+            "command": "cmake-language-server",
+            "filetypes": [
+                "cmake"
+            ],
+            "rootPatterns": [
+                "build/"
+            ],
+            "initializationOptions": {
+                "buildDirectory": "build"
+            }
+        },
+        "lua": {
+            "command": "lua-language-server",
+            "filetypes": [
+                "lua"
+            ],
+        }
+    },
+    "signature.floatConfig": {
+        "winblend": 20
+    },
+    "hover.floatConfig": {
+        "winblend": 20,
+    },
+    "outline.sortBy": "position",
+    "outline.previewWinblend": 20,
+    "outline.previewBorderRounded": true,
+    "outline.autoPreview": true,
+    "tree.key.close": "<C-q>",
+    "texlab.chktex.onOpenAndSave": true,
+    "markdown-preview-enhanced.enableScriptExecution": true,
+    "markdown-preview-enhanced.enableHTML5Embed": true,
+    "markdown-preview-enhanced.enableTypographer": true,
+    "markdown-preview-enhanced.mathjaxV3ScriptSrc": "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js",
+    "git.virtualTextPrefix": " ",
+    "git.addGBlameToVirtualText": true,
+    "git.showCommitInFloating": true,
+    "git.floatConfig": {
+        "border": true,
+        "rounded": true,
+        "title": "Commit Info",
+    },
+    "coc.preferences.extensionUpdateCheck": "daily",
+    "coc.preferences.enableMessageDialog": true,
+    "coc.preferences.enableLinkedEditing": true,
+    "coc.preferences.formatOnSave": true,
+    "coc.preferences.currentFunctionSymbolAutoUpdate": true,
+    "coc.source.word.shortcut": "Word",
+    "suggest.reversePumAboveCursor": true,
+    "suggest.floatConfig": {
+        "winblend": 20,
+    },
+    "suggest.pumFloatConfig": {
+        "winblend": 20,
+    },
+    "suggest.noselect": true,
+    "suggest.enablePreselect": false,
+    "suggest.completionItemKindLabels": {
+        "class": "",
+        "color": "",
+        "constant": "",
+        "default": "",
+        "enum": "",
+        "enumMember": "",
+        "event": "",
+        "field": "",
+        "file": "",
+        "folder": "",
+        "function": "󰊕",
+        "interface": "",
+        "keyword": "",
+        "method": "",
+        "module": "󰕳",
+        "operator": "",
+        "property": "",
+        "reference": "",
+        "snippet": "",
+        "struct": "",
+        "text": "",
+        "typeParameter": "",
+        "unit": "󰚯",
+        "value": "󰫧",
+        "variable": ""
+    },
+    "suggest.virtualText": true,
+    "diagnostic.floatConfig": {
+        "winblend": 20
+    },
+    "diagnostic.errorSign": "",
+    "diagnostic.warningSign": "",
+    "diagnostic.infoSign": "",
+    "diagnostic.hintSign": "",
+    "diagnostic.checkCurrentLine": true,
+    "diagnostic.virtualTextPrefix": " □ ",
+    "diagnostic.virtualText": true,
+    "diagnostic.virtualTextCurrentLineOnly": false,
+    "diagnostic.messageDelay": 10,
+    "diagnostic.virtualTextLimitInOneLine": 2,
+    "codeLens.position": "right_align",
+    "codeLens.enable": true,
+    "links.highlight": true,
+    "explorer.icon.readonly": "",
+    "explorer.focus": false,
+    "explorer.datetime.format": "yy/MM/dd HH:mm:ss",
+    "explorer.file.reveal.auto": true,
+    "explorer.width": 30,
+    "explorer.sources": [
+        {
+            "name": "bookmark",
+            "expand": false
+        },
+        {
+            "name": "buffer",
+            "expand": false
+        },
+        {
+            "name": "file",
+            "expand": true
+        }
+    ],
+    "explorer.file.showHiddenFiles": true,
+    "explorer.icon.enableNerdfont": true,
+    "explorer.icon.link": "→",
+    "explorer.keyMappings.global": {
+        "O": [
+            "wait",
+            "expanded?",
+            "collapse:recursive",
+            "expand:recursive"
+        ],
+        "a": "addFile",
+        "A": "addDirectory",
+        "rn": "rename",
+        "yp": "copyFilepath",
+        "yn": "copyFilename",
+        "yy": "copyFile",
+        "dd": "cutFile",
+        "p": "pasteFile",
+        "d": "delete",
+        "D": "deleteForever",
+        "<c-o>": "noop",
+        "*": "toggleSelection",
+        "<tab>": "actionMenu",
+        "gk": [
+            "normal:k"
+        ],
+        "gj": [
+            "noop"
+        ],
+        "h": [
+            "wait",
+            "expandable?",
+            "collapse",
+            [
+                "expandabelPrev",
+                "collapse"
+            ]
+        ],
+        "l": [
+            "wait",
+            "expandable?",
+            "expand",
+            "noop"
+        ],
+        "J": [
+            "wait",
+            "toggleSelection",
+            "normal:j"
+        ],
+        "K": [
+            "wait",
+            "toggleSelection",
+            "normal:k"
+        ],
+        "gl": "noop",
+        "gh": "noop",
+        "<2-LeftMouse>": [
+            "expandable?",
+            [
+                "expanded?",
+                "collapse",
+                "expand"
+            ],
+            "open"
+        ],
+        "o": [
+            "wait",
+            "expandable?",
+            [
+                "expanded?",
+                "noop",
+                "expand"
+            ],
+            "open"
+        ],
+        "<cr>": [
+            "wait",
+            "expandable?",
+            "cd",
+            "open"
+        ],
+        "e": "noop",
+        "os": "open:split",
+        "OS": "open:vsplit",
+        "E": "noop",
+        "t": "open:tab",
+        "<bs>": "noop",
+        "P": [
+            "expandable?",
+            "gotoParent",
+            [
+                "expandablePrev",
+                "gotoParent"
+            ]
+        ],
+        "gs": [
+            "wait",
+            "reveal:select"
+        ],
+        "il": "preview:labeling",
+        "ic": "preview:content",
+        "Il": "previewOnHover:toggle:labeling",
+        "Ic": "previewOnHover:toggle:content",
+        "II": "previewOnHover:disable",
+        "zh": "toggleHidden",
+        "g<dot>": "toggleHidden",
+        "R": "refresh",
+        "?": "help",
+        "q": "quit",
+        "<esc>": "esc",
+        "X": "systemExecute",
+        "gd": "listDrive",
+        "f": "search",
+        "F": "search:recursive",
+        "gf": "gotoSource:file",
+        "gb": "gotoSource:buffer",
+        "[[": [
+            "wait",
+            "sourcePrev"
+        ],
+        "]]": [
+            "wait",
+            "sourceNext"
+        ],
+        "[i": [
+            "wait",
+            "indentPrev"
+        ],
+        "]i": [
+            "wait",
+            "indentNext"
+        ],
+        "[m": [
+            "wait",
+            "markPrev:modified"
+        ],
+        "]m": [
+            "wait",
+            "markNext:modified"
+        ],
+        "[d": [
+            "wait",
+            "markPrev:diagnosticError:diagnosticWarning"
+        ],
+        "]d": [
+            "wait",
+            "markNext:diagnosticError:diagnosticWarning"
+        ],
+        "[D": [
+            "wait",
+            "markPrev:diagnosticError"
+        ],
+        "]D": [
+            "wait",
+            "markNext:diagnosticError"
+        ],
+        "[g": [
+            "wait",
+            "markPrev:git"
+        ],
+        "]g": [
+            "wait",
+            "markNext:git"
+        ],
+        "<<": "gitStage",
+        ">>": "gitUnstage"
+    },
+    "python.analysis.diagnosticMode": "openFilesOnly",
+    "python.analysis.typeCheckingMode": "basic",
+    "python.formatting.provider": "black",
+    "python.linting.pycodestyleEnabled": true,
+    "python.linting.pydocstyleEnabled": true,
+    "pyright.testing.provider": "pytest",
+    "python.linting.ignorePatterns": [
+        ".vscode/*.py",
+        "**/site-packages/**/*.py",
+        "dataset/*"
+    ],
+    "pydocstring.enableFileAction": true,
+    "inlayHint.display": false,
+    "markdownlint.onChange": false,
+    "markdownlint.config": {
+        "default": true,
+        "line_length": false,
+        "indentation": false,
+        "no-inline-html": false
+    },
+    "yank.highlight.duration": 200,
+    "workspace.rootPatterns": [
+        ".git",
+        ".hg",
+        ".projections.json",
+        ".vscode",
+        ".root"
+    ],
+    "list.floatPreview": true,
+    "list.smartCase": true
+}
