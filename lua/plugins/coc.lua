@@ -88,6 +88,13 @@ return {
         -- " Manually kill coc PID if failed
         vim.cmd [[autocmd VimLeavePre * if get(g:, 'coc_process_pid', 0)
        	        \ | call system('kill -9 '.g:coc_process_pid) | endif]]
+        -- Highlight the symbol and its references on a CursorHold event(cursor is idle)
+        vim.api.nvim_create_augroup("CocGroup", {})
+        vim.api.nvim_create_autocmd("CursorHold", {
+            group = "CocGroup",
+            command = "silent call CocActionAsync('highlight')",
+            desc = "Highlight symbol under cursor on CursorHold"
+        })
         ----------------------
         ---- coc-explorer ----
         ----------------------

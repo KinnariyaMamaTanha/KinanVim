@@ -29,7 +29,28 @@
             "filetypes": [
                 "lua"
             ],
-        }
+            "rootPatterns": [
+                ".git/"
+            ],
+            "settings": {
+                "Lua": {
+                    "diagnostics": {
+                        "enable": true,
+                        "globals": [
+                            "hs",
+                            "vim",
+                            "it",
+                            "describe",
+                            "before_each",
+                            "after_each"
+                        ],
+                        "disable": [
+                            "lowercase-global"
+                        ]
+                    },
+                }
+            },
+        },
     },
     "signature.floatConfig": {
         "winblend": 20
@@ -47,6 +68,7 @@
     "markdown-preview-enhanced.enableHTML5Embed": true,
     "markdown-preview-enhanced.enableTypographer": true,
     "markdown-preview-enhanced.mathjaxV3ScriptSrc": "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js",
+    "markdown-preview-enhanced.previewColorScheme": "editorColorScheme",
     "git.virtualTextPrefix": " ",
     "git.addGBlameToVirtualText": true,
     "git.showCommitInFloating": true,

@@ -39,11 +39,13 @@ return {
     },
     {
         "folke/todo-comments.nvim",
+        dependencies = { "nvim-lua/plenary.nvim" },
         keys = {
             { "TD", "<cmd>TodoTelescope<CR>", mode = "n" }
         },
         config = function()
             vim.keymap.set("n", "TD", "<cmd>TodoTelescope<CR>", { silent = true })
+            require("todo-comments").setup()
         end
     }
 }

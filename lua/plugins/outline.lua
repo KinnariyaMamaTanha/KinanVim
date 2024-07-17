@@ -213,9 +213,9 @@ return {
                 -- You can use a custom function that returns the icon for each symbol kind.
                 -- This function takes a kind (string) as parameter and should return an
                 -- icon as string.
-                ---@param kind string
-                ---@param bufnr integer Code buffer
-                ---@returns string|boolean The icon string (key of `icons` table), or `false`
+                ---param kind string
+                ---param bufnr integer Code buffer
+                ---returns string|boolean The icon string (key of `icons` table), or `false`
                 ---                        to fallback to `icon_source`.
                 icon_fetcher = nil,
                 -- 3rd party source for fetching icons. Fallback if icon_fetcher returned

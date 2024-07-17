@@ -452,7 +452,7 @@ return {
                         key_hl = "Number"
                     },
                     {
-                        action = 'edit ~/.config/nvim/lua/config/plugins/',
+                        action = 'edit ~/.config/nvim/lua/config/plugins.lua',
                         desc = " Plugins",
                         desc_hl = "String",
                         icon = " ",

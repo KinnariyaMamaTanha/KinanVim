@@ -1,6 +1,6 @@
 # KinanVim
 
-> My pure lua configuration of neovim on ubuntu22.04(WSL2). You can also see my viml configuration for both vim and neovim at [KinaVim](https://github.com/KinnariyaMamaTanha/KinaVim). Pay attention that there is only one different character 'n' between the names. And 'KinanVim' should be pronounced like 'Kina n Vim'
+> My pure lua configuration of neovim on ubuntu22.04(WSL2). You can also see my viml configuration for both vim and neovim at [KinaVim](https://github.com/KinnariyaMamaTanha/KinaVim). Pay attention that there is only one different character 'n' between the name 'Kinavim' and 'kinanVim', and 'KinanVim' should be pronounced like 'Kina n Vim'.
 
 ## Features
 
@@ -50,7 +50,7 @@ nvim
 
 - After install all the plugins, you should:
 
-1. For **Neovim** users: add `export PATH="$PATH:$HOME/.local/share/nvim/mason/bin` to your `.bashrc` or `.zshrc` or so, then install LSPs, DAPs, etcs with mason.nvim.
+1. Add `export PATH="$PATH:$HOME/.local/share/nvim/mason/bin` to your `.bashrc` or `.zshrc` or so, then install LSPs, DAPs, etcs with mason.nvim.
 2. **Wakatime** setup: If you have a [wakatime](https://wakatime.com/) account, you should also set up wakatime plugin according to [vim-wakatime](https://github.com/wakatime/vim-wakatime).
 3. **Copilot** setup: If you have a GitHub copilot account, you should set up [copilot.vim](https://github.com/github/copilot.vim) in Vim or [copilot.lua](https://github.com/zbirenbaum/copilot.lua) in Neovim according to their READMEs.
 4. Press hot-key `TD` to see all the configurations you need to modify.
