@@ -21,7 +21,7 @@ return {
             'coc-markdown-preview-enhanced',
             'coc-html',
             'coc-texlab',
-            'coc-pairs'
+            'coc-pairs',
         }
         local keyset = vim.keymap.set
         -- Autocomplete

@@ -114,6 +114,9 @@ nvim
 - [rcarriga/nvim-notify](https://github.com/rcarriga/nvim-notify)
 - [Eandrju/cellular-automaton.nvim](https://github.com/Eandrju/cellular-automaton.nvim)
 - [iqxd/vim-mine-sweeping](https://github.com/iqxd/vim-mine-sweeping)
+- [CopilotC-Nvim/CopilotChat.nvim](https://github.com/CopilotC-Nvim/CopilotChat.nvim)
+- [folke/trouble.nvim](https://github.com/folke/trouble.nvim)
+- [jbyuki/nabla.nvim](https://github.com/jbyuki/nabla.nvim)
 
 <details>
   <summary><b>coc.nvim plugins</b></summary>
@@ -136,7 +139,6 @@ nvim
 - [weirongxu/coc-markdown-preview-enhanced](https://github.com/weirongxu/coc-markdown-preview-enhanced)
 - [neoclide/coc-html](https://github.com/neoclide/coc-html)
 - [fannheyward/coc-texlab](https://github.com/fannheyward/coc-texlab)
-- [josa42/coc-lua](https://github.com/josa42/coc-lua)
 - [neoclide/coc-pairs](https://github.com/neoclide/coc-pairs)
 
 </details>
