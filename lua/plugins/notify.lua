@@ -1,11 +1,22 @@
 return {
     "rcarriga/nvim-notify",
+    event = "VeryLazy",
     config = function()
+        require('notify').setup {
+            timeout = 2000,
+            render = "wrapped-compact",
+            stages = "fade"
+        }
         -- coc integration
         local coc_status_record = {}
         function coc_status_notify(msg, level)
-            local notify_opts = { title = "LSP Status", timeout = 500, hide_from_history = true, on_close =
-            reset_coc_status_record }
+            local notify_opts = {
+                title = "LSP Status",
+                timeout = 500,
+                hide_from_history = true,
+                on_close =
+                    reset_coc_status_record
+            }
             -- if coc_status_record is not {} then add it to notify_opts to key called "replace"
             if coc_status_record ~= {} then
                 notify_opts["replace"] = coc_status_record.id
@@ -32,7 +43,7 @@ return {
             coc_diag_record = {}
         end
 
-        require("notify")("Hello, world.", "info", { title = "Kinnariya" })
+        require("notify")("Hello, world.", "info", { title = "Kinnariya", timeout = 500 })
 
         function coc_notify(msg, level)
             local notify_opts = { title = "LSP Message", timeout = 500 }
@@ -40,11 +51,6 @@ return {
         end
 
         vim.cmd [[
-            function! s:InitCoc() abort
-                " load overrides
-                runtime! autoload/coc/ui.vim
-                execute "lua require(\"notify\")('Initialized coc.nvim for LSP support', 'info', { title = 'LSP Status' })"
-            endfunction
             function! s:DiagnosticNotify() abort
               let l:info = get(b:, 'coc_diagnostic_info', {})
               if empty(l:info) | return '' | endif
@@ -81,12 +87,7 @@ return {
               call v:lua.coc_status_notify(l:status, l:level)
             endfunction
 
-            function! s:InitCoc() abort
-              execute "lua require(\"notify\")('Initialized coc.nvim for LSP support', 'info', { title = 'LSP Status' })"
-            endfunction
-
             " notifications
-            autocmd User CocNvimInit call s:InitCoc()
             autocmd User CocDiagnosticChange call s:DiagnosticNotify()
             autocmd User CocStatusChange call s:StatusNotify()
         ]]

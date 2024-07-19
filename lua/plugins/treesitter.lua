@@ -1,10 +1,16 @@
 return {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
-    lazy = false,
+    event = "VeryLazy",
+    lazy = vim.fn.argc(-1) == 0,
+    init = function(plugin)
+        require("lazy.core.loader").add_to_rtp(plugin)
+        require("nvim-treesitter.query_predicates")
+    end,
+    cmd = { "TSUpdateSync", "TSUpdate", "TSInstall" },
     config = function()
         require("nvim-treesitter.configs").setup({
-            ensure_installed = { "markdown", "markdown_inline", "lua", "vim", "vimdoc", "python", "html", "latex" },
+            ensure_installed = { "markdown", "markdown_inline", "lua", "vim", "vimdoc", "python", "html", "latex", "bash", "dockerfile" },
 
             -- Install parsers synchronously (only applied to `ensure_installed`)
             sync_install = true,

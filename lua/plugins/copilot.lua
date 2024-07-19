@@ -74,13 +74,20 @@ return {
             },
         },
         opts = {
-            temperature = 0.1,
-            question_header = '## Me ',
+            temperature = 0.7,
+            question_header = ' Me ',
+            answer_header = "  Copilot ",
+            model = "gpt-4",
             context = "buffer",
-            history_path = '/home/kinnariya/.config/nvim/copilotchat_history',
+            -- TODO: Replace it with your favorite path
+            history_path = '/home/kinnariya/.cache/nvim/copilotchat_history',
             window = {
-                width = 0.3,
+                width = 0.5,
             },
+            selection = function(source)
+                local select = require("CopilotChat.select")
+                return select.visual(source) or select.buffer(source)
+            end,
             mappings = {
                 close = {
                     normal = '<C-q>',

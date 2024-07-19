@@ -8,19 +8,20 @@
 2. Wonderful file navigation and tag list(powered by telescope, coc-list, coc-explorer, yazi).
 3. Integrated with various apps, including yazi, git, lazygit, lazydocker, Ipython and Python.
 4. Great multi-language translation.
-5. Beautiful appearance.
+5. Blazing fast startup time: only 30ms on average (and 20ms least on my machine)!
+6. Beautiful appearance.
 
 ## Requirements
 
 - terminal with a nerd font and 256-color support.
-- Neovim(I am using 0.10 now).
-- curl, git, nodejs, yarn, fd, sed
+- Neovim(I am using 0.10 now), pynvim(python module), and tree-sitter-cli.
+- curl, git, nodejs, yarn, fd, sed.
 - For Python:
-    - python3, black(formatter), ipython, debugpy(debugger), Anaconda or Miniconda >= 4.6
+    - python3, black(formatter), ipython, debugpy(debugger), pytest, Anaconda or Miniconda >= 4.6
 - For C/C++:
     - gcc, g++, clangd(LSP), make, cmake, cmake-format(formatter), cmake-language-server(LSP), codelldb(debugger)
 - For LaTeX:
-    - texlive, texlab(LSP), latexindent(formatter), zathura on WSL2(not recommended) or SumatraPDF on host Windows located at `/mnt/c/Users/YourUserName/AppData/Local/SumatraPDF/SumatraPDF.exe`(You need to replace your username in `~/.vim/configs/plugins/vimtex.vim)`!!!
+    - texlive, texlab(LSP), latexindent(formatter), zathura on WSL2(not recommended) or SumatraPDF on host Windows located at `/mnt/c/Users/YourUserName/AppData/Local/SumatraPDF/SumatraPDF.exe`(You need to replace your username in `~/.config/nvim/lua/plugins/vimtex.lua`!!!
 - For Assembly:
     - asm-lsp(LSP), asmfmt(formatter)
 - For PDF:
@@ -32,7 +33,6 @@
 - For lua:
     - lua-language-server
 - fzf, yazi, lazygit(all optional but useful)
-- For Neovim users: pynvim(python module), and tree-sitter-cli
 
 ## Installation
 
@@ -52,7 +52,7 @@ nvim
 
 1. Add `export PATH="$PATH:$HOME/.local/share/nvim/mason/bin` to your `.bashrc` or `.zshrc` or so, then install LSPs, DAPs, etcs with mason.nvim.
 2. **Wakatime** setup: If you have a [wakatime](https://wakatime.com/) account, you should also set up wakatime plugin according to [vim-wakatime](https://github.com/wakatime/vim-wakatime).
-3. **Copilot** setup: If you have a GitHub copilot account, you should set up [copilot.vim](https://github.com/github/copilot.vim) in Vim or [copilot.lua](https://github.com/zbirenbaum/copilot.lua) in Neovim according to their READMEs.
+3. **Copilot** setup: If you have a GitHub copilot account, you should set up [copilot.lua](https://github.com/zbirenbaum/copilot.lua) and [CopilotChat.nvim](https://github.com/CopilotC-Nvim/CopilotChat.nvim) according to their READMEs.
 4. Press hot-key `TD` to see all the configurations you need to modify.
 5. Read the configurations to be familiar with its keymaps and functions.
 
@@ -64,7 +64,7 @@ nvim
 - [folke/lazy.nvim](https://github.com/folke/lazy.nvim)
 - [neoclide/coc.nvim](https://github.com/neoclide/coc.nvim)
 - [honza/vim-snippets](https://github.com/honza/vim-snippets)
-- [rhysd/clever-f.vim](https://github.com/rhysd/clever-f.vim)
+- [folke/flash.nvim](https://github.com/folke/flash.nvim)
 - [wakatime/vim-wakatime](https://github.com/wakatime/vim-wakatime)
 - [kkvh/vim-docker-tools](https://github.com/kkvh/vim-docker-tools)
 - [hotoo/pangu.vim](https://github.com/hotoo/pangu.vim)
@@ -117,6 +117,12 @@ nvim
 - [CopilotC-Nvim/CopilotChat.nvim](https://github.com/CopilotC-Nvim/CopilotChat.nvim)
 - [folke/trouble.nvim](https://github.com/folke/trouble.nvim)
 - [jbyuki/nabla.nvim](https://github.com/jbyuki/nabla.nvim)
+- [nvim-zh/colorful-winsep.nvim](https://github.com/nvim-zh/colorful-winsep.nvim)
+- [nyngwang/NeoZoom.lua](https://github.com/nyngwang/NeoZoom.lua)
+- [mistricky/codesnap.nvim](https://github.com/mistricky/codesnap.nvim)
+- [folke/noice.nvim](https://github.com/folke/noice.nvim)
+- [theKnightsOfRohan/csvlens.nvim](https://github.com/theKnightsOfRohan/csvlens.nvim)
+- [emmanueltouzery/decisive.nvim](https://github.com/emmanueltouzery/decisive.nvim)
 
 <details>
   <summary><b>coc.nvim plugins</b></summary>

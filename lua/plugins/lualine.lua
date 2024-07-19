@@ -1,7 +1,18 @@
 return {
     'nvim-lualine/lualine.nvim',
+    event = "VeryLazy",
+    init = function()
+        vim.g.lualine_laststatus = vim.o.laststatus
+        if vim.fn.argc(-1) > 0 then
+            -- set an empty statusline till lualine loads
+            vim.o.statusline = " "
+        else
+            -- hide the statusline on the starter page
+            vim.o.laststatus = 0
+        end
+    end,
     dependencies = { 'nvim-tree/nvim-web-devicons' },
-    config = function()
+    opts = function()
         local function python_venv()
             local function env_cleanup(venv)
                 if string.find(venv, "/") then
@@ -25,13 +36,17 @@ return {
             end
             return ""
         end
-
-        require('lualine').setup {
+        opts = {
             options = {
                 globalstatus = true,
+                disabled_filetypes = { statusline = { "dashboard", "lazy", "startuptime" } },
             },
             sections = {
-                lualine_x = { 'fileformat', 'filetype', python_venv },
+                lualine_c = {
+                    { 'filetype', icon_only = true,                 separator = "", padding = { left = 1, right = 0 } },
+                    { 'filename', padding = { left = 0, right = 0 } }
+                },
+                lualine_x = { 'fileformat', python_venv },
                 lualine_y = {
                     { "progress", separator = " ",                  padding = { left = 1, right = 0 } },
                     { "location", padding = { left = 0, right = 1 } },
@@ -43,5 +58,6 @@ return {
                 },
             },
         }
-    end
+        return opts
+    end,
 }

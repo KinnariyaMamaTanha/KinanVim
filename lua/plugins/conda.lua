@@ -1,14 +1,14 @@
 return {
     "kmontocam/nvim-conda",
     dependencies = { "nvim-lua/plenary.nvim" },
-    cmd = { "CondaActivate", "CondaDeactivate", "Condac", "Condad" },
+    ft = "python",
     config = function()
         vim.cmd [[
             " Define a function to activate Conda and then restart Coc
             function! CondaDeactivateAndRestart()
                 " Call the CondaActivate command
                 execute "CondaDeactivate"
-                execute 'lua require("notify")("The environment ' . a:1 . ' is deactivated.", "info", { title = "nvim-onda" })'
+                execute 'lua require("notify")("The environment is deactivated.", "info", { title = "nvim-onda" })'
                 silent! execute "CocRestart" | autocmd! CondaCoc
             endfunction
 

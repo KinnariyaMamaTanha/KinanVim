@@ -13,8 +13,21 @@ return {
                     variables = 'none'
                 },
                 lualine = {
-                    transparent = false,
+                    transparent = true,
                 },
+                highlights = {
+                    ["@variable.python"] = { fg = '$red' },
+                    ["@operator.python"] = { fg = '$cyan' },
+                    ["@operator.c"] = { fg = '$purple' },
+                    ["@string.escape.python"] = { fg = '$cyan' },
+                    ["@function.call.python"] = { fg = '$blue' },
+                    ["@constructor.python"] = { fg = '$blue' },
+                    ["@variable.member.python"] = { fg = '$fg' },
+                    ["@none.python"] = { fg = '$purple' },
+                    ["@markup.strong"] = { fg = '$orange', fmt = 'bold' },
+                    ["@markup.italic"] = { fg = '#7dcfff' },
+                    DashboardFooter = { fg = '$purple', fmt = "italic" }
+                }
             }
             vim.cmd [[colorscheme onedark]]
         end,
@@ -22,6 +35,9 @@ return {
     {
         "folke/tokyonight.nvim",
         lazy = true,
+        opts = {
+            style = "storm",
+        }
     },
     {
         "Mofiqul/vscode.nvim",

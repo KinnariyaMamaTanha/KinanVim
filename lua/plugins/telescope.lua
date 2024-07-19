@@ -31,8 +31,8 @@ return {
         require('telescope').setup {
             defaults = {
                 history = {
-                    -- TODO: Change the path to your path!!! Like `/home/Username/.vim/telescope_history`
-                    path = "/home/kinnariya/.config/nvim/telescope_history"
+                    -- TODO: Change the path to your favorite
+                    path = "~/.cacha/nvim/telescope_history"
                 },
                 mappings = {
                     i = {

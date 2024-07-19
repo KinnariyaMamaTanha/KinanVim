@@ -1,6 +1,7 @@
 return {
     "neoclide/coc.nvim",
     branch = "release",
+    event = "VeryLazy",
     config = function()
         vim.g.coc_global_extensions = {
             'coc-sh',
@@ -118,7 +119,7 @@ return {
         ---- coc-yank ----
         ------------------
         -- " show yank list
-        keyset("n", "<leader>y", "<cmd><C-u>CocList -A --normal yank<CR>", { silent = true, noremap = true })
+        keyset("n", "<leader>y", "<cmd>CocList -A --normal yank<CR>", { silent = true, noremap = true })
         -- " clean yank history
         keyset("n", "<leader>yc", "<cmd>CocCommand yank.clean<CR>", { silent = true, noremap = true })
         -----------------

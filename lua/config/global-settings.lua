@@ -37,22 +37,36 @@ vim.o.hlsearch = true
 vim.o.incsearch = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
+vim.o.cmdheight = 0
 vim.cmd [[
     autocmd BufEnter * if 0 == len(filter(range(1, winnr('$')), 'empty(getbufvar(winbufnr(v:val), "&bt"))')) | qa! | endif
     autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif " remember the last position of cursor
     " WSL2 yank support, according to https://www.reddit.com/r/bashonubuntuonwindows/comments/be2q3l/comment/el2vx7u/?utm_source=share&utm_medium=web2x
-    let s:clip = '/mnt/c/Windows/System32/clip.exe'  " change this path according to your mount point
+    let s:clip = '/mnt/c/Windows/System32/clip.exe'  " TODO: change this path according to your mount point
     augroup WSLYank
         autocmd!
         autocmd TextYankPost * if v:event.operator ==# 'y' | call system('cat |' . s:clip, @0) | endif
     augroup END
+    " Persistent undo history
+    if has("persistent_undo")
+        " TODO: Replace with your favorite path
+        let target_path = expand('~/.cache/nvim/undo')
+
+        " create the directory and any parent directories
+        " if the location does not exist.
+        if !isdirectory(target_path)
+            call mkdir(target_path, "p", 0700)
+        endif
+
+        let &undodir=target_path
+        set undofile
+    endif
 ]]
 vim.o.conceallevel = 2
 vim.o.pumblend = 20
 vim.o.virtualedit = "block"
 vim.o.backspace = "2"
 vim.o.timeoutlen = 100
-vim.g.python3_host_skip_check = 1
 vim.o.updatetime = 100
 vim.cmd [[
     " right click menu settings
