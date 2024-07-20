@@ -474,15 +474,6 @@ return {
                         key_hl = "Number"
                     },
                     {
-                        action = 'edit ~/.config/nvim/lua/config/plugins.lua',
-                        desc = " Plugins",
-                        desc_hl = "String",
-                        icon = " ",
-                        icon_hl = "Title",
-                        key = "P",
-                        key_hl = "Number"
-                    },
-                    {
                         action = 'edit ~/.config/nvim/README.md',
                         desc = " README",
                         desc_hl = "String",

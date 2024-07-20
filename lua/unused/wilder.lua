@@ -4,7 +4,7 @@ return {
     --     "nvim-tree/nvim-web-devicons",
     -- },
     -- event = 'CmdlineEnter',
-    -- build = "UpdateRemotePlugins",
+    -- build = ":UpdateRemotePlugins",
     -- config = function()
     --     local wilder = require('wilder')
     --

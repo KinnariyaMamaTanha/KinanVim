@@ -37,7 +37,6 @@ vim.o.hlsearch = true
 vim.o.incsearch = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
-vim.o.cmdheight = 0
 vim.cmd [[
     autocmd BufEnter * if 0 == len(filter(range(1, winnr('$')), 'empty(getbufvar(winbufnr(v:val), "&bt"))')) | qa! | endif
     autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif " remember the last position of cursor

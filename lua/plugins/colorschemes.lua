@@ -21,8 +21,10 @@ return {
                     ["@operator.c"] = { fg = '$purple' },
                     ["@string.escape.python"] = { fg = '$cyan' },
                     ["@function.call.python"] = { fg = '$blue' },
-                    ["@constructor.python"] = { fg = '$blue' },
+                    ["@constructor.python"] = { fg = '$cyan' },
                     ["@variable.member.python"] = { fg = '$fg' },
+                    ["@type.builtin.python"] = { fg = '$yellow' },
+                    ["@variable.builtin.python"] = { fg = '$yellow', fmt = 'italic' },
                     ["@none.python"] = { fg = '$purple' },
                     ["@markup.strong"] = { fg = '$orange', fmt = 'bold' },
                     ["@markup.italic"] = { fg = '#7dcfff' },
@@ -41,6 +43,10 @@ return {
     },
     {
         "Mofiqul/vscode.nvim",
-        lazy = true
+        lazy = true,
+        opts = {
+            italic_comments = true,
+            underline_links = true,
+        }
     }
 }

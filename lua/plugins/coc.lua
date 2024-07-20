@@ -24,6 +24,7 @@ return {
             'coc-texlab',
             'coc-pairs',
         }
+
         local keyset = vim.keymap.set
         -- Autocomplete
         function _G.check_back_space()

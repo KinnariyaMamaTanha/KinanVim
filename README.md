@@ -17,7 +17,7 @@
 - Neovim(I am using 0.10 now), pynvim(python module), and tree-sitter-cli.
 - curl, git, nodejs, yarn, fd, sed.
 - For Python:
-    - python3, black(formatter), ipython, debugpy(debugger), pytest, Anaconda or Miniconda >= 4.6
+    - python3, black(formatter), ipython, debugpy(debugger), pytest, Anaconda or Miniconda >= 4.6, jupytext(for notebook)
 - For C/C++:
     - gcc, g++, clangd(LSP), make, cmake, cmake-format(formatter), cmake-language-server(LSP), codelldb(debugger)
 - For LaTeX:
@@ -123,6 +123,7 @@ nvim
 - [folke/noice.nvim](https://github.com/folke/noice.nvim)
 - [theKnightsOfRohan/csvlens.nvim](https://github.com/theKnightsOfRohan/csvlens.nvim)
 - [emmanueltouzery/decisive.nvim](https://github.com/emmanueltouzery/decisive.nvim)
+- [michaelb/sniprun](https://github.com/michaelb/sniprun)
 
 <details>
   <summary><b>coc.nvim plugins</b></summary>
@@ -160,7 +161,7 @@ nvim
   - [ ] makefile
   - [ ] cmake
   - [x] docker
-- [ ] Editing and running jupyter notebook inside neovim.
+- [x] Editing and running jupyter notebook inside neovim.
 - [x] Support Conda venv (de)activating without leaving neovim.
 - [ ] Better user experience
 

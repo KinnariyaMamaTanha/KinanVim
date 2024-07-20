@@ -9,7 +9,7 @@ return {
     {
         "nyngwang/NeoZoom.lua",
         keys = {
-            { "<CR>", "NeoZoomToggle", mode = "n", { silent = true, nowait = true } }
+            { "f<CR>", "NeoZoomToggle", mode = "n", { silent = true, nowait = true } }
         },
         config = function()
             require('neo-zoom').setup {
@@ -51,7 +51,7 @@ return {
                     },
                 },
             }
-            vim.keymap.set('n', '<CR>', function() vim.cmd('NeoZoomToggle') end, { silent = true, nowait = true })
+            vim.keymap.set('n', 'f<CR>', function() vim.cmd('NeoZoomToggle') end, { silent = true, nowait = true })
             vim.api.nvim_create_autocmd({ 'WinEnter' }, {
                 callback = function()
                     local zoom_book = require('neo-zoom').zoom_book

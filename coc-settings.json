@@ -69,6 +69,14 @@
     "markdown-preview-enhanced.enableTypographer": true,
     "markdown-preview-enhanced.mathjaxV3ScriptSrc": "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js",
     "markdown-preview-enhanced.previewColorScheme": "selectedPreviewTheme",
+    "markdown-preview-enhanced.previewTheme": "github-light.css",
+    "markdownlint.onChange": false,
+    "markdownlint.config": {
+        "default": true,
+        "line_length": false,
+        "indentation": false,
+        "no-inline-html": false
+    },
     "git.virtualTextPrefix": " ",
     "git.addGBlameToVirtualText": true,
     "git.showCommitInFloating": true,
@@ -323,7 +331,7 @@
         ">>": "gitUnstage"
     },
     "python.analysis.diagnosticMode": "openFilesOnly",
-    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.typeCheckingMode": "off",
     "python.formatting.provider": "black",
     "python.linting.pycodestyleEnabled": true,
     "python.linting.pydocstyleEnabled": true,
@@ -335,13 +343,6 @@
     ],
     "pydocstring.enableFileAction": true,
     "inlayHint.display": false,
-    "markdownlint.onChange": false,
-    "markdownlint.config": {
-        "default": true,
-        "line_length": false,
-        "indentation": false,
-        "no-inline-html": false
-    },
     "yank.highlight.duration": 200,
     "workspace.rootPatterns": [
         ".git",
@@ -352,5 +353,4 @@
     ],
     "list.floatPreview": true,
     "list.smartCase": true,
-    "markdown-preview-enhanced.previewTheme": "github-light.css"
 }

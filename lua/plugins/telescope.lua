@@ -44,6 +44,12 @@ return {
                     },
                 }
             },
+            extensions = {
+                media_files = {
+                    filetypes = { "png", "webp", "jpg", "jpeg", "pdf", "webm", "mp4" },
+                    find_cmd = "rg"
+                }
+            },
         }
     end
 }

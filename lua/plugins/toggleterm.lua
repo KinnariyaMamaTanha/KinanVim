@@ -3,7 +3,7 @@ return {
     keys = {
         { "<F3>", "<cmd>Toggleterm<cr>", mode = { "i", "n" } },
     },
-    cmd = { "LazyGit", "LazyDocker", "Python", "Ipyhon", "Yazi" },
+    event = "VeryLazy",
     config = function()
         require("toggleterm").setup({
             open_mapping = [[<F3>]],
@@ -55,7 +55,6 @@ return {
         local ipython    = Terminal:new({
             cmd = "ipython",
             hidden = true,
-            size = vim.o.columns * 0.5,
             direction = 'horizontal',
             on_open = function(term)
                 vim.cmd("startinsert!")
