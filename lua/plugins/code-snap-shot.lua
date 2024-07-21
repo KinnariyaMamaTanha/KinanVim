@@ -11,12 +11,13 @@ return {
     },
     opts = {
         title = "",
-        -- TODO: Create the directory before you use this plugin
+        -- TODO: Create the directory before using this plugin
         save_path = "~/Pictures",
         has_breadcrumbs = true,
         bg_theme = "default",
         bg_color = "#535c68",
         bg_padding = 0,
+        -- TODO: Change the watermark before using this plugin
         watermark = " @KinnariyaMamaTanha",
         has_line_number = true,
         show_workspace = true,
