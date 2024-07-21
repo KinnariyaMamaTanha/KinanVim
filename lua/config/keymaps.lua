@@ -47,6 +47,9 @@ local mappings = {
     { from = "VV", to = "<C-q>", mode = mode_n }
 }
 
+vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+
 for _, mapping in ipairs(mappings) do
     vim.keymap.set(mapping.mode or "n", mapping.from, mapping.to, { noremap = true })
 end

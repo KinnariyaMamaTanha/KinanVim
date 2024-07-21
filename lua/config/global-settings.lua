@@ -2,10 +2,14 @@ vim.o.number = true
 vim.o.relativenumber = true
 vim.o.foldmethod = "indent"
 vim.o.foldlevelstart = 99
+vim.o.foldlevelstart = 99
+vim.o.foldenable = true
+vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
+vim.o.foldcolumn = '1'
 vim.o.scrolloff = 5
 vim.o.sidescrolloff = 4
 vim.o.cursorline = true
-vim.o.cursorcolumn = true
+-- vim.o.cursorcolumn = true
 vim.o.compatible = false
 vim.o.hidden = true
 vim.o.showmatch = true
@@ -37,6 +41,8 @@ vim.o.hlsearch = true
 vim.o.incsearch = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
+vim.o.breakindent = true
+vim.o.linebreak = true
 vim.cmd [[
     autocmd BufEnter * if 0 == len(filter(range(1, winnr('$')), 'empty(getbufvar(winbufnr(v:val), "&bt"))')) | qa! | endif
     autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif " remember the last position of cursor

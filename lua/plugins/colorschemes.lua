@@ -48,5 +48,10 @@ return {
             italic_comments = true,
             underline_links = true,
         }
+    },
+    {
+        "catppuccin/nvim",
+        name = "catppuccin",
+        lazy = true,
     }
 }

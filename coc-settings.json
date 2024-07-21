@@ -1,4 +1,5 @@
 {
+    "clangd.disableProgressNotifications": true,
     "cursors.cancelKey": "<leader><cr>",
     "cursors.nextKey": "<C-n>",
     "cursors.previousKey": "<C-p>",
@@ -76,14 +77,6 @@
         "line_length": false,
         "indentation": false,
         "no-inline-html": false
-    },
-    "git.virtualTextPrefix": " ",
-    "git.addGBlameToVirtualText": true,
-    "git.showCommitInFloating": true,
-    "git.floatConfig": {
-        "border": true,
-        "rounded": true,
-        "title": "Commit Info",
     },
     "coc.preferences.extensionUpdateCheck": "daily",
     "coc.preferences.enableMessageDialog": true,

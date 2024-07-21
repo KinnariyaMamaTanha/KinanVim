@@ -10,7 +10,7 @@ return {
             'coc-pyright',
             'coc-clangd',
             'coc-markdownlint',
-            'coc-git',
+            -- 'coc-git',
             'coc-explorer',
             'coc-snippets',
             'coc-word',
@@ -44,8 +44,9 @@ return {
         -- Make <CR> to accept selected completion item or notify coc.nvim to format
         -- <C-g>u breaks current undo, please make your own choice
         keyset("i", "<cr>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]], opts)
-        -- Use <c-j> to trigger snippets
-        keyset("i", "<c-j>", "<Plug>(coc-snippets-expand-jump)")
+        -- Use <tab> and <S-tab> to jump between snippet placeholders
+        vim.g.coc_snippet_next = "<tab>"
+        vim.g.coc_snippet_prev = "<S-tab>"
         -- Use <c-space> to trigger completion
         keyset("i", "<c-space>", "coc#refresh()", { silent = true, expr = true })
         -- GoTo code navigation
@@ -77,10 +78,13 @@ return {
         local opts = { silent = true, nowait = true }
         -- Add `:Format` command to format current buffer
         vim.api.nvim_create_user_command("Format", "call CocAction('format')", {})
-        -- " Add `:Fold` command to fold current buffer
+        -- Add `:Fold` command to fold current buffer
         vim.api.nvim_create_user_command("Fold", "call CocAction('fold', <f-args>)", { nargs = '?' })
         -- Add `:OR` command for organize imports of the current buffer
         vim.api.nvim_create_user_command("OR", "call CocActionAsync('runCommand', 'editor.action.organizeImport')", {})
+
+        vim.api.nvim_create_user_command("CocExtensions", "CocList extensions", {})
+        vim.api.nvim_create_user_command("CocYank", "CocList -A --normal yank", {})
         keyset("n", "sa", "<Plug>(coc-codeaction-source)", { silent = true, noremap = true })
         keyset("n", "cl", "<Plug>(coc-codeaction-line)", { silent = true, noremap = true })
         keyset("x", "ca", "<Plug>(coc-codeaction-selected)", { silent = true, noremap = true })
@@ -123,21 +127,6 @@ return {
         keyset("n", "<leader>y", "<cmd>CocList -A --normal yank<CR>", { silent = true, noremap = true })
         -- " clean yank history
         keyset("n", "<leader>yc", "<cmd>CocCommand yank.clean<CR>", { silent = true, noremap = true })
-        -----------------
-        ---- coc-git ----
-        -----------------
-        -- " navigate chunks of current buffer
-        keyset("n", "[g", "<Plug>(coc-git-prevchunk)", opts)
-        keyset("n", "]g", "<Plug>(coc-git-nextchunk)", opts)
-        -- " navigate chunks of conflicts
-        keyset("n", "[c", "<Plug>(coc-git-prevconflict)", opts)
-        keyset("n", "]c", "<Plug>(coc-git-nextchunkict)", opts)
-        -- " show chunk diff at current position
-        keyset("n", "df", "<Plug>(coc-git-chunkinfo)", opts)
-        -- " show commit contains current position
-        keyset("n", "cm", "<Plug>(coc-git-commit)", opts)
-        -- " show git status with coc-list
-        keyset("n", "gs", "<cmd><C-u>CocList --normal gstatus<CR>", opts)
         ---------------------------------------
         ---- coc-markdown-preview-enhanced ----
         ---------------------------------------
