@@ -3,6 +3,7 @@ return {
     branch = "release",
     event = "VeryLazy",
     config = function()
+        vim.api.nvim_command('highlight link CocFloating Normal')
         vim.g.coc_global_extensions = {
             'coc-sh',
             'coc-json',
@@ -10,7 +11,6 @@ return {
             'coc-pyright',
             'coc-clangd',
             'coc-markdownlint',
-            -- 'coc-git',
             'coc-explorer',
             'coc-snippets',
             'coc-word',
@@ -38,12 +38,14 @@ return {
         -- NOTE: Use command ':verbose imap <tab>' to make sure Tab is not mapped by
         -- other plugins before putting this into your config
         local opts = { silent = true, noremap = true, expr = true, replace_keycodes = false }
-        keyset("i", "<TAB>", 'coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_space() ? "<TAB>" : coc#refresh()',
+        keyset("i", "<TAB>",
+            'coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_space() ? "<TAB>" : coc#refresh()',
             opts)
         keyset("i", "<S-TAB>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]], opts)
         -- Make <CR> to accept selected completion item or notify coc.nvim to format
         -- <C-g>u breaks current undo, please make your own choice
-        keyset("i", "<cr>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]], opts)
+        keyset("i", "<cr>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]],
+            opts)
         -- Use <tab> and <S-tab> to jump between snippet placeholders
         vim.g.coc_snippet_next = "<tab>"
         vim.g.coc_snippet_prev = "<S-tab>"
@@ -81,7 +83,8 @@ return {
         -- Add `:Fold` command to fold current buffer
         vim.api.nvim_create_user_command("Fold", "call CocAction('fold', <f-args>)", { nargs = '?' })
         -- Add `:OR` command for organize imports of the current buffer
-        vim.api.nvim_create_user_command("OR", "call CocActionAsync('runCommand', 'editor.action.organizeImport')", {})
+        vim.api.nvim_create_user_command("OR", "call CocActionAsync('runCommand', 'editor.action.organizeImport')",
+            {})
 
         vim.api.nvim_create_user_command("CocExtensions", "CocList extensions", {})
         vim.api.nvim_create_user_command("CocYank", "CocList -A --normal yank", {})
@@ -93,7 +96,7 @@ return {
         keyset({ "n", "i" }, "<A-f>", "<Plug>(coc-float-jump)", { silent = true, noremap = true })
         -- " Manually kill coc PID if failed
         vim.cmd [[autocmd VimLeavePre * if get(g:, 'coc_process_pid', 0)
-       	        \ | call system('kill -9 '.g:coc_process_pid) | endif]]
+     	        \ | call system('kill -9 '.g:coc_process_pid) | endif]]
         -- Highlight the symbol and its references on a CursorHold event(cursor is idle)
         vim.api.nvim_create_augroup("CocGroup", {})
         vim.api.nvim_create_autocmd("CursorHold", {

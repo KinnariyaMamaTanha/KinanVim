@@ -32,6 +32,9 @@
     - docker, lazydocker(optional)
 - For lua:
     - lua-language-server
+- For remote development:
+    - local: ssh, sshfs
+    - remote: ssh, fd(optional), ripgrep(optional)
 - fzf, yazi, lazygit(all optional but useful)
 
 ## Installation
@@ -91,9 +94,13 @@ nvim
 - [hedyhli/outline.nvim](https://github.com/hedyhli/outline.nvim)
 - [honza/vim-snippets](https://github.com/honza/vim-snippets)
 - [hotoo/pangu.vim](https://github.com/hotoo/pangu.vim)
+- [hrsh7th/cmp-buffer](https://github.com/hrsh7th/cmp-buffer)
+- [hrsh7th/cmp-cmdline](https://github.com/hrsh7th/cmp-cmdline)
+- [hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
 - [HiPhish/rainbow-delimiters.nvim](https://github.com/HiPhish/rainbow-delimiters.nvim)
 - [iqxd/vim-mine-sweeping](https://github.com/iqxd/vim-mine-sweeping)
 - [jbyuki/nabla.nvim](https://github.com/jbyuki/nabla.nvim)
+- [kevinhwang91/nvim-bqf](https://github.com/kevinhwang91/nvim-bqf)
 - [kevinhwang91/nvim-ufo](https://github.com/kevinhwang91/nvim-ufo)
 - [kevinhwang91/promise-async](https://github.com/kevinhwang91/promise-async)
 - [kkvh/vim-docker-tools](https://github.com/kkvh/vim-docker-tools)
@@ -119,6 +126,7 @@ nvim
 - [natecraddock/workspaces.nvim](https://github.com/natecraddock/workspaces.nvim)
 - [navarasu/onedark.nvim](https://github.com/navarasu/onedark.nvim)
 - [neoclide/coc.nvim](https://github.com/neoclide/coc.nvim)
+- [nosduco/remote-sshfs.nvim](https://github.com/nosduco/remote-sshfs.nvim)
 - [numToStr/Comment.nvim](https://github.com/numToStr/Comment.nvim)
 - [nvimdev/dashboard-nvim](https://github.com/nvimdev/dashboard-nvim)
 - [nvim-lua/plenary.nvim](https://github.com/nvim-lua/plenary.nvim)
@@ -173,7 +181,7 @@ nvim
 
 - [ ] Add support for sql
 - [x] Integration with copilot
-- [ ] Add support for remote development
+- [x] Add support for remote development
 - [ ] Better support for makefile, cmake and docker.
   - [ ] makefile
   - [ ] cmake

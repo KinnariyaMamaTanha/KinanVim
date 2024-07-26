@@ -27,7 +27,7 @@ return {
         vim.g.rainbow_delimiters = { highlight = highlight }
         require("ibl").setup({
             exclude = {
-                filetypes = { "startify", "coc-explorer", "coctree", "undotree", "toggleterm", "dashboard", "help" }
+                filetypes = { "lazy", "coc-explorer", "coctree", "undotree", "toggleterm", "dashboard", "help" }
             },
             indent = {
                 char = "▏",
