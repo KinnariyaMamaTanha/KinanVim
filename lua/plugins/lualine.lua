@@ -39,16 +39,40 @@ return {
         opts = {
             options = {
                 globalstatus = true,
-                disabled_filetypes = { statusline = { "dashboard", "lazy", "startuptime" } },
+                disabled_filetypes = { statusline = { "dashboard", "lazy", "startuptime", "mason", "calendar" } },
+                section_separators = '',
+                component_separators = ''
             },
             sections = {
-                lualine_c = {
-                    { 'filetype', icon_only = true,                 separator = "", padding = { left = 1, right = 0 } },
-                    { 'filename', padding = { left = 0, right = 0 } }
+                lualine_a = {
+                    { 'mode', icons_enabled = true, fmt = function(str) return str:sub(1, 1) end }
                 },
-                lualine_x = { 'fileformat', python_venv },
+                lualine_b = {
+                    'branch',
+                    { 'diff', padding = { left = 0, right = 1 } },
+                },
+                lualine_c = {
+                    { 'diagnostics', sources = { 'coc' } },
+                    { 'filetype',    icon_only = true,   separator = "", padding = { left = 1, right = 0 }, icon = { align = 'right' } },
+                    {
+                        'filename',
+                        padding = { left = 0, right = 0 },
+                        symbols = {
+                            modified = '', -- Text to show when the file is modified.
+                            readonly = '', -- Text to show when the file is non-modifiable or readonly.
+                            unnamed = '[Unnamed]', -- Text to show for unnamed buffers.
+                            newfile = '', -- Text to show for newly created file before first write
+                        }
+                    },
+                    { 'seletctioncount', padding = { left = 0, right = 0 } },
+                },
+                lualine_x = {
+                    { 'filesize', padding = { left = 0, right = 1 }, separator = "│" },
+                    { python_venv, separator = "│", padding = { left = 1, right = 1 }, },
+                    'fileformat',
+                },
                 lualine_y = {
-                    { "progress", separator = " ",                  padding = { left = 1, right = 0 } },
+                    { "progress", padding = { left = 1, right = 0 } },
                     { "location", padding = { left = 0, right = 1 } },
                 },
                 lualine_z = {
@@ -57,6 +81,7 @@ return {
                     end,
                 },
             },
+            extensions = { "fugitive", "man", "lazy", "nvim-dap-ui", "toggleterm", "trouble" }
         }
         return opts
     end,

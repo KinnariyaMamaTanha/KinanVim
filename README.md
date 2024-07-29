@@ -1,6 +1,6 @@
 # KinanVim
 
-> My pure lua configuration of neovim on ubuntu22.04(WSL2). You can also see my viml configuration for both vim and neovim at [KinaVim](https://github.com/KinnariyaMamaTanha/KinaVim). Pay attention that there is only one different character 'n' between the name 'Kinavim' and 'kinanVim', and 'KinanVim' should be pronounced like 'Kina n Vim'.
+> My pure lua configuration of neovim on Ubuntu22.04(WSL2). You can also see my viml configuration for both vim and neovim at [KinaVim](https://github.com/KinnariyaMamaTanha/KinaVim). Pay attention that there is only one different character 'n' between the name 'Kinavim' and 'KinanVim', and 'KinanVim' should be pronounced like 'Kina n Vim'.
 
 ## Features
 
@@ -57,7 +57,8 @@ nvim
 2. **Wakatime** setup: If you have a [wakatime](https://wakatime.com/) account, you should also set up wakatime plugin according to [vim-wakatime](https://github.com/wakatime/vim-wakatime).
 3. **Copilot** setup: If you have a GitHub copilot account, you should set up [copilot.lua](https://github.com/zbirenbaum/copilot.lua) and [CopilotChat.nvim](https://github.com/CopilotC-Nvim/CopilotChat.nvim) according to their READMEs.
 4. Press hot-key `TD` to see all the configurations you need to modify.
-5. Read the configurations to be familiar with its keymaps and functions.
+5. If you want to change c/cpp formatting rules, use `.clang-format` file then.
+6. Read the configurations to be familiar with its keymaps and functions.
 
 ## Plugins
 
@@ -89,7 +90,6 @@ nvim
 - [FabianWirth/search.nvim](https://github.com/FabianWirth/search.nvim)
 - [Febri-i/fscreen.nvim](https://github.com/Febri-i/fscreen.nvim)
 - [Febri-i/snake.nvim](https://github.com/Febri-i/snake.nvim)
-- [gelguy/wilder.nvim](https://github.com/gelguy/wilder.nvim)
 - [GCBallesteros/jupytext.nvim](https://github.com/GCBallesteros/jupytext.nvim)
 - [hedyhli/outline.nvim](https://github.com/hedyhli/outline.nvim)
 - [honza/vim-snippets](https://github.com/honza/vim-snippets)
@@ -99,6 +99,7 @@ nvim
 - [hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
 - [HiPhish/rainbow-delimiters.nvim](https://github.com/HiPhish/rainbow-delimiters.nvim)
 - [iqxd/vim-mine-sweeping](https://github.com/iqxd/vim-mine-sweeping)
+- [itchyny/calendar.vim](https://github.com/itchyny/calendar.vim)
 - [jbyuki/nabla.nvim](https://github.com/jbyuki/nabla.nvim)
 - [kevinhwang91/nvim-bqf](https://github.com/kevinhwang91/nvim-bqf)
 - [kevinhwang91/nvim-ufo](https://github.com/kevinhwang91/nvim-ufo)

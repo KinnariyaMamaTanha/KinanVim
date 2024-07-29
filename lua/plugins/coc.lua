@@ -52,10 +52,14 @@ return {
         -- Use <c-space> to trigger completion
         keyset("i", "<c-space>", "coc#refresh()", { silent = true, expr = true })
         -- GoTo code navigation
-        keyset("n", "gd", "<cmd>call CocAction('jumpDefinition', v:false)<cr>", { silent = true })
-        keyset("n", "gy", "<cmd>call CocAction('jumpTypeDefinition', v:false)<cr>", { silent = true })
-        keyset("n", "gi", "<cmd>call CocAction('jumpImplementation', v:false)<cr>", { silent = true })
-        keyset("n", "gr", "<cmd>call CocAction('jumpReferences', v:false)<cr>", { silent = true })
+        keyset("n", "gpd", "<cmd>call CocAction('jumpDefinition', v:false)<cr>", { silent = true })
+        keyset("n", "gpy", "<cmd>call CocAction('jumpTypeDefinition', v:false)<cr>", { silent = true })
+        keyset("n", "gpi", "<cmd>call CocAction('jumpImplementation', v:false)<cr>", { silent = true })
+        keyset("n", "gpr", "<cmd>call CocAction('jumpReferences', v:false)<cr>", { silent = true })
+        keyset("n", "gd", "<Plug>(coc-definition)", { silent = true })
+        keyset("n", "gy", "<Plug>(coc-type-definition)", { silent = true })
+        keyset("n", "gi", "<Plug>(coc-implementation)", { silent = true })
+        keyset("n", "gr", "<Plug>(coc-references)", { silent = true })
         -- Use `[d` and `]d` to navigate diagnostics
         -- Use `:CocDiagnostics` to get all diagnostics of current buffer in location list
         keyset("n", "[d", "<Plug>(coc-diagnostic-prev)", { silent = true })

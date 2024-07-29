@@ -40,25 +40,13 @@ return {
                         filetype = "coc-explorer",
                         text = "File Explorer",
                         highlight = "Directory",
-                        text_align = "left"
+                        text_align = "right"
                     },
                     {
                         filetype = "Outline",
                         text = "Outline",
                         highlight = "Directory",
-                        text_align = "right"
-                    },
-                    {
-                        filetype = "undotree",
-                        text = "Undo Tree",
-                        highlight = "Directory",
-                        text_align = "right"
-                    },
-                    {
-                        filetype = "coctree",
-                        text = "ToDo Tree",
-                        highlight = "Directory",
-                        text_align = "right"
+                        text_align = "left"
                     },
                 },
                 numbers = 'ordinal'

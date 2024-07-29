@@ -158,14 +158,6 @@
     "explorer.width": 30,
     "explorer.sources": [
         {
-            "name": "bookmark",
-            "expand": false
-        },
-        {
-            "name": "buffer",
-            "expand": false
-        },
-        {
             "name": "file",
             "expand": true
         }

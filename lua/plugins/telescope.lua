@@ -32,7 +32,7 @@ return {
             defaults = {
                 history = {
                     -- TODO: Change the path to your favorite
-                    path = "~/.cacha/nvim/telescope_history"
+                    path = "~/.cache/nvim/telescope_history"
                 },
                 mappings = {
                     i = {
