@@ -180,7 +180,7 @@ return {
                         color = { bg = 'bg', fg = "#c3e88d" },
                         padding = { left = 1, right = 0 },
                         on_click = function()
-                            vim.cmd('lua Compile_and_run_single_file()')
+                            Compile_and_run_single_file()
                         end
                     },
                     {
@@ -197,22 +197,6 @@ return {
                         padding = { left = 1, right = 0 },
                         on_click = function()
                             require('dapui').toggle()
-                        end
-                    },
-                    {
-                        function()
-                            local filetype = vim.bo.filetype
-                            local types = { 'c', 'cpp', 'python', 'sh' }
-                            if is_in_tbl(filetype, types) then
-                                return ''
-                            else
-                                return ''
-                            end
-                        end,
-                        color = { bg = 'bg', fg = "#7aa2f7" },
-                        padding = { left = 1, right = 1 },
-                        on_click = function()
-                            vim.cmd('CopilotChatToggle')
                         end
                     },
                     {
@@ -293,6 +277,22 @@ return {
                         padding = { left = 1, right = 1 },
                         on_click = function()
                             vim.cmd('Calendar')
+                        end
+                    },
+                    {
+                        function()
+                            local filetype = vim.bo.filetype
+                            local types = { 'c', 'cpp', 'python', 'sh' }
+                            if is_in_tbl(filetype, types) then
+                                return ''
+                            else
+                                return ''
+                            end
+                        end,
+                        color = { bg = 'bg', fg = "#7aa2f7" },
+                        padding = { left = 1, right = 1 },
+                        on_click = function()
+                            vim.cmd('CopilotChatToggle')
                         end
                     },
                     {
