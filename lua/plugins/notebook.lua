@@ -1,7 +1,6 @@
 return {
     {
         "GCBallesteros/jupytext.nvim",
-        event = "VeryLazy",
         ft = "python",
         opts = {
             style = "hydrogen",

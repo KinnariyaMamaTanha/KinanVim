@@ -1,13 +1,12 @@
 return {
     {
-        "tpope/vim-fugitive",
-        cmd = { 'Git', 'Gdiffsplit', 'Gvdiffsplit', 'Gsplit', 'Gvsplit', 'GMove', 'GRename', 'GDelete', 'GRemove', 'GBrowse', 'Gclog' },
-    },
-    {
         "rbong/vim-flog",
         cmd = { "Flog", "Flogsplit", "Floggit" },
         dependencies = {
-            "tpope/vim-fugitive",
+            {
+                "tpope/vim-fugitive",
+                lazy = true,
+            }
         },
     },
     {
@@ -27,6 +26,7 @@ return {
                     ignore_whitespace = false,
                     virt_text_priority = 100,
                 },
+                show_deleted                 = false,
                 current_line_blame_formatter = ' <author>, <author_time:%R> - <summary>',
                 preview_config               = {
                     -- Options passed to nvim_open_win
@@ -64,7 +64,7 @@ return {
 
                     -- Actions
                     map('n', 'df', gitsigns.preview_hunk)
-                    map('n', 'cm', function() gitsigns.blame_line { full = true } end)
+                    map('n', 'cm', gitsigns.blame)
                     map('n', '<leader>gd', gitsigns.diffthis)
                     map('n', '<leader>gD', function() gitsigns.diffthis('~') end)
 

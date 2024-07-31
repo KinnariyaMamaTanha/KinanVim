@@ -2,7 +2,7 @@ return {
     {
         "CRAG666/code_runner.nvim",
         keys = {
-            { "<F5>", ":lua Compile_and_run_single_file()<CR>" }
+            { "<F5>", "<cmd>lua Compile_and_run_single_file()<CR>" }
         },
         config = function()
             -- Map <F5> to call Compile_and_run_single_file function
@@ -18,6 +18,8 @@ return {
                     vim.cmd('CocCommand markdown-preview-enhanced.openPreview')
                 elseif filetype == 'tex' then
                     vim.cmd('VimtexCompile')
+                elseif filetype == 'lua' then
+                    vim.cmd("luafile %")
                 end
             end
 

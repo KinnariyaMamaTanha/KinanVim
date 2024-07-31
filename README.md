@@ -36,6 +36,7 @@
     - local: ssh, sshfs
     - remote: ssh, fd(optional), ripgrep(optional)
 - fzf, yazi, lazygit(all optional but useful)
+- wakatime-cli if using wakatime
 
 ## Installation
 
@@ -107,6 +108,7 @@ nvim
 - [kkvh/vim-docker-tools](https://github.com/kkvh/vim-docker-tools)
 - [kmontocam/nvim-conda](https://github.com/kmontocam/nvim-conda)
 - [kylechui/nvim-surround](https://github.com/kylechui/nvim-surround)
+- [KinnariyaMamaTanha/kinamusic](https://github.com/KinnariyaMamaTanha/kinamusic)
 - [lambdalisue/vim-suda](https://github.com/lambdalisue/vim-suda)
 - [ldelossa/nvim-ide](https://github.com/ldelossa/nvim-ide)
 - [lervag/vimtex](https://github.com/lervag/vimtex)
@@ -118,7 +120,6 @@ nvim
 - [mayanksuman/vim-notes-markdown](https://github.com/mayanksuman/vim-notes-markdown)
 - [mfussenegger/nvim-dap](https://github.com/mfussenegger/nvim-dap)
 - [mfussenegger/nvim-dap-python](https://github.com/mfussenegger/nvim-dap-python)
-- [mfussenegger/nvim-lint](https://github.com/mfussenegger/nvim-lint)
 - [michaelb/sniprun](https://github.com/michaelb/sniprun)
 - [mistricky/codesnap.nvim](https://github.com/mistricky/codesnap.nvim)
 - [MeanderingProgrammer/markdown.nvim](https://github.com/MeanderingProgrammer/markdown.nvim)

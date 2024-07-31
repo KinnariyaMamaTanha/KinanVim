@@ -10,7 +10,7 @@ return {
                     left_pad = 1,
                 }
             })
-            vim.keymap.set("n", "<C-m><C-k>", ":RenderMarkdownToggle<CR>")
+            vim.keymap.set("n", "<C-m><C-k>", "<cmd>RenderMarkdownToggle<CR>")
         end
     },
     {

@@ -3,7 +3,7 @@ return {
     keys = {
         { "<F3>", "<cmd>Toggleterm<cr>", mode = { "i", "n" } },
     },
-    event = "VeryLazy",
+    cmd = { "LazyGit", "LazyDocker", },
     config = function()
         require("toggleterm").setup({
             open_mapping = [[<F3>]],

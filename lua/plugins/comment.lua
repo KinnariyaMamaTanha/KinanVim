@@ -1,7 +1,7 @@
 return {
     {
         "numToStr/Comment.nvim",
-        event = "VeryLazy",
+        keys = { "<leader>ci", "<leader>cbi", "<leader>cbl", "<leader>cO", "<leader>co", "<leader>cA" },
         config = function()
             require('Comment').setup({
                 ---LHS of toggle mappings in NORMAL mode
@@ -44,6 +44,7 @@ return {
         keys = {
             { "TD", "<cmd>TodoTelescope<CR>", mode = "n" }
         },
+        cmd = { "TodoTelescope" },
         config = function()
             vim.keymap.set("n", "TD", "<cmd>TodoTelescope<CR>", { silent = true })
             require("todo-comments").setup()

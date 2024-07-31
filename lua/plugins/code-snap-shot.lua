@@ -1,3 +1,7 @@
+local path = vim.fn.expand("~/Pictures")
+if vim.fn.isdirectory(path) == 0 then
+    vim.fn.mkdir(path)
+end
 return {
     "mistricky/codesnap.nvim",
     build = "make",
@@ -11,8 +15,7 @@ return {
     },
     opts = {
         title = "",
-        -- TODO: Create the directory before using this plugin
-        save_path = "~/Pictures",
+        save_path = path,
         has_breadcrumbs = true,
         bg_theme = "default",
         bg_color = "#535c68",

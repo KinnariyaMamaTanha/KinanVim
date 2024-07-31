@@ -47,6 +47,6 @@ return {
                 }
             }
         }
-        vim.keymap.set({ "n", "v" }, "<leader><leader>", ":Pantran<CR>", { silent = true, noremap = true })
+        vim.keymap.set({ "n", "v" }, "<leader><leader>", "<cmd>Pantran<CR>", { silent = true, noremap = true })
     end
 }
