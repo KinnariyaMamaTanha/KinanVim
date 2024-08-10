@@ -46,12 +46,13 @@ vim.o.linebreak = true
 vim.cmd [[
     autocmd BufEnter * if 0 == len(filter(range(1, winnr('$')), 'empty(getbufvar(winbufnr(v:val), "&bt"))')) | qa! | endif
     autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif " remember the last position of cursor
-    " WSL2 yank support, according to https://www.reddit.com/r/bashonubuntuonwindows/comments/be2q3l/comment/el2vx7u/?utm_source=share&utm_medium=web2x
-    let s:clip = '/mnt/c/Windows/System32/clip.exe'  " TODO: change this path according to your mount point
-    augroup WSLYank
-        autocmd!
-        autocmd TextYankPost * if v:event.operator ==# 'y' | call system('cat |' . s:clip, @0) | endif
-    augroup END
+    " WSL2 yank support
+    if system('uname -r') =~ "Microsoft"
+        augroup Yank
+            autocmd!
+            autocmd TextYankPost * :call system('/mnt/c/windows/system32/clip.exe ',@")
+        augroup END
+    endif
     " Persistent undo history
     if has("persistent_undo")
         " TODO: Replace with your favorite path
@@ -79,7 +80,7 @@ vim.cmd [[
     vnoremenu PopUp.CodeAction\ selected <Plug>(coc-codeaction-selected)
     vnoremenu PopUp.Refactor <Plug>(coc-codeaction-refactor-selected)
     vnoremenu PopUp.-2- :
-    vnoremenu PopUp.Translate :Pantran<CR>
+    vnoremenu PopUp.Translate <cmd>Pantran<CR>
 
     aunmenu PopUp.How-to\ disable\ mouse
     " aunmenu PopUp.-1-

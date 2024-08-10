@@ -16,6 +16,7 @@ return {
             { "<leader>nr", "<cmd>IronRestart<cr>", mode = "n", { silent = true, noremap = true } },
             { "<leader>nh", "<cmd>IronHide<cr>",    mode = "n", { silent = true, noremap = true } },
         },
+        cmd = { "IronRepl" },
         config = function()
             local iron = require("iron.core")
             iron.setup({

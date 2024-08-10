@@ -4,13 +4,10 @@ return {
     keys = {
         { "wk", "<cmd>Telescope workspaces<CR>" }
     },
-    config = function()
-        vim.keymap.set("n", "wk", "<cmd>Telescope workspaces<CR>", { silent = true })
-        require("workspaces").setup({
-            hooks = {
-                open = "Telescope find_files",
-            },
-            path = "/home/kinnariya/.config/nvim/workspaces"
-        })
-    end
+    opts = {
+        hooks = {
+            open = "Telescope find_files",
+        },
+        path = "/home/kinnariya/.config/nvim/workspaces"
+    }
 }

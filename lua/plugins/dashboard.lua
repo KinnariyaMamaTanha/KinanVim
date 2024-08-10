@@ -456,15 +456,6 @@ return {
                         key_hl = "Number"
                     },
                     {
-                        action = 'ToDo',
-                        desc = " TODOs",
-                        desc_hl = "String",
-                        icon = " ",
-                        icon_hl = "Title",
-                        key = "t",
-                        key_hl = "Number"
-                    },
-                    {
                         action = 'edit ~/.config/nvim/init.lua',
                         desc = " Config",
                         desc_hl = "String",

@@ -22,12 +22,13 @@ return {
                     ["@string.escape.python"] = { fg = '$cyan' },
                     ["@function.call.python"] = { fg = '$blue' },
                     ["@constructor.python"] = { fg = '$cyan' },
-                    ["@variable.member.python"] = { fg = '$fg' },
+                    ["@variable.member.python"] = { fg = '$cyan' },
                     ["@type.builtin.python"] = { fg = '$yellow' },
                     ["@variable.builtin.python"] = { fg = '$yellow', fmt = 'italic' },
                     ["@none.python"] = { fg = '$purple' },
                     ["@markup.strong"] = { fg = '$orange', fmt = 'bold' },
                     ["@markup.italic"] = { fg = '#7dcfff' },
+                    ["@markup.math.latex"] = { fg = '$cyan' },
                     DashboardFooter = { fg = '$purple', fmt = "italic" }
                 }
             }
@@ -53,5 +54,17 @@ return {
         "catppuccin/nvim",
         name = "catppuccin",
         lazy = true,
-    }
+    },
+    {
+        "uga-rosa/ccc.nvim",
+        cmd = {
+            "CccPick",
+            "CccConvert",
+            "CccHighlighterTogggle",
+        },
+        opts = function()
+            vim.api.nvim_command('highlight link CccFloatNormal Normal')
+            vim.api.nvim_command('highlight link CccFloatBorder Normal')
+        end
+    },
 }

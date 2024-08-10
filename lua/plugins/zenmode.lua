@@ -5,8 +5,7 @@ return {
         keys = {
             { "<C-l>", "<cmd>ZenMode<cr>" },
         },
-        config = function()
-        end
+        config = function() end
     },
     {
         "folke/twilight.nvim",

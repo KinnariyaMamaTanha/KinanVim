@@ -2,10 +2,9 @@ return {
     "FabianWirth/search.nvim",
     dependencies = { "nvim-telescope/telescope.nvim" },
     keys = {
-        { "<leader>s", "<cmd>lua require('search').open()<CR>" },
+        { "<leader>s", "<cmd>lua require('search').open()<CR>", { silent = true, noremap = true } },
     },
     config = function()
-        vim.keymap.set("n", "<leader>s", "<cmd>lua require('search').open()<CR>", { silent = true, noremap = true })
         local builtin = require('telescope.builtin')
         require("search").setup({
             mappings = { -- optional: configure the mappings for switching tabs (will be set in normal and insert mode(!))

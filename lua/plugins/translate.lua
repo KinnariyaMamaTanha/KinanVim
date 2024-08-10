@@ -1,8 +1,9 @@
 return {
     "potamides/pantran.nvim",
     keys = {
-        { "<leader><leader>", "<cmd>Pantran<CR>", { silent = true, noremap = true } },
+        { "<leader><leader>", "<cmd>Pantran<CR>", mode = { "n", "v" }, { silent = true, noremap = true } },
     },
+    cmd = { "Pantran" },
     config = function()
         require("pantran").setup {
             default_engine = "google",
@@ -47,6 +48,5 @@ return {
                 }
             }
         }
-        vim.keymap.set({ "n", "v" }, "<leader><leader>", "<cmd>Pantran<CR>", { silent = true, noremap = true })
     end
 }

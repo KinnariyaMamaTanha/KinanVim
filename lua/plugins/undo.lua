@@ -1,9 +1,11 @@
 return {
-    "debugloop/telescope-undo.nvim",
+    "mbbill/undotree",
     keys = {
-        { "UD", "<cmd>Telescope undo<cr>" },
+        { "UD", "<cmd>UndotreeToggle<cr>", desc = "Toggle Undotree" }
     },
     config = function()
-        vim.keymap.set("n", "UD", "<cmd>Telescope undo<CR>")
+        vim.g.undotree_WindowLayout = 3
+        vim.g.undotree_ShortIndicators = 1
+        vim.g.undotree_UndoDir = '~/.cache/nvim/undo'
     end
 }

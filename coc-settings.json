@@ -56,10 +56,14 @@
         },
     },
     "signature.floatConfig": {
-        "winblend": 20
+        "winblend": 20,
+        "border": true,
+        "rounded": true
     },
     "hover.floatConfig": {
         "winblend": 20,
+        "border": true,
+        "rounded": true
     },
     "outline.sortBy": "position",
     "outline.previewWinblend": 20,
@@ -80,6 +84,7 @@
         "indentation": false,
         "no-inline-html": false
     },
+    "markdown-preview-enhanced.codeBlockTheme": "one-dark.css",
     "coc.preferences.extensionUpdateCheck": "daily",
     "coc.preferences.enableMessageDialog": true,
     "coc.preferences.enableLinkedEditing": true,
@@ -100,6 +105,13 @@
     "suggest.reversePumAboveCursor": true,
     "suggest.floatConfig": {
         "winblend": 20,
+        "border": true,
+        "rounded": true,
+    },
+    "floatFactory.floatConfig": {
+        "winblend": 20,
+        "border": true,
+        "rounded": true,
     },
     "suggest.pumFloatConfig": {
         "winblend": 20,
@@ -136,7 +148,9 @@
     },
     "suggest.virtualText": true,
     "diagnostic.floatConfig": {
-        "winblend": 20
+        "winblend": 20,
+        "border": true,
+        "rounded": true
     },
     "diagnostic.errorSign": "",
     "diagnostic.warningSign": "",
@@ -165,6 +179,7 @@
     "explorer.file.showHiddenFiles": true,
     "explorer.icon.enableNerdfont": true,
     "explorer.icon.link": "→",
+    "explorer.icon.source": "nvim-web-devicons",
     "explorer.keyMappings.global": {
         "O": [
             "wait",
@@ -341,7 +356,7 @@
         "dataset/*"
     ],
     "pydocstring.enableFileAction": true,
-    "inlayHint.display": false,
+    "inlayHint.enable": false,
     "yank.highlight.duration": 200,
     "workspace.rootPatterns": [
         ".git",

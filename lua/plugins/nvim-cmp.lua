@@ -88,8 +88,8 @@ return {
                 },
                 window = {
                     completion = {
-                        border = nil,
-                        winhighlight = "Normal:Normal",
+                        border = "rounded",
+                        winhighlight = "Normal:Normal,FloatBorder:Normal",
                     },
                 },
                 mapping = cmp.mapping.preset.insert({

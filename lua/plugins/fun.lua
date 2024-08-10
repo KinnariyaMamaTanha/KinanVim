@@ -26,7 +26,7 @@ return {
         opts = {
             card_style = "large", -- "mini"
             -- TODO: Replace with your favorite path
-            scores_path = "/home/kinnariya/.cache/blackjack_scores.json"
+            scores_path = "/home/kinnariya/.cache/nvim/blackjack_scores.json"
         }
     }
 }

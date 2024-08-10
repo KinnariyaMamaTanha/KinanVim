@@ -2,12 +2,14 @@ return {
     "neoclide/coc.nvim",
     branch = "release",
     event = "VeryLazy",
+    dependencies = {
+        "nvim-tree/nvim-web-devicons"
+    },
     config = function()
         vim.api.nvim_command('highlight link CocFloating Normal')
         vim.g.coc_global_extensions = {
             'coc-sh',
             'coc-json',
-            'coc-vimlsp',
             'coc-pyright',
             'coc-clangd',
             'coc-markdownlint',
@@ -17,7 +19,6 @@ return {
             'coc-yank',
             'coc-pydocstring',
             'coc-docker',
-            'coc-ecdict',
             'coc-webview',
             'coc-markdown-preview-enhanced',
             'coc-html',
@@ -77,8 +78,6 @@ return {
         end
 
         keyset("n", "K", '<CMD>lua _G.show_docs()<CR>', { silent = true })
-        -- Symbol renaming
-        keyset("n", "<leader>rn", "<Plug>(coc-rename)", { silent = true })
         -- Apply codeAction to the selected region
         -- Example: `<leader>aap` for current paragraph
         local opts = { silent = true, nowait = true }

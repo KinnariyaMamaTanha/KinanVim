@@ -1,6 +1,5 @@
 return {
     "makerj/vim-pdf",
     ft = "pdf",
-    config = function()
-    end
+    config = function() end
 }

@@ -99,6 +99,42 @@ return {
         end
         -- For wakatime end
 
+        -- For click popup-menus
+        vim.cmd [[
+            nnoremenu Colorscheme.Onedark <cmd>colorscheme onedark<cr>
+            nnoremenu Colorscheme.Tokyonight <cmd>colorscheme tokyonight<cr>
+            nnoremenu Colorscheme.Vscode <cmd>colorscheme vscode<cr>
+            nnoremenu Colorscheme.Catppuccin <cmd>colorscheme catppuccin<cr>
+
+            nnoremenu Branch.Git\ Graph <cmd>Flogsplit<cr>
+            nnoremenu Branch.Blame <cmd>lua require("gitsigns").blame()<CR>
+            nnoremenu Branch.Status <cmd>Floggit<CR>
+            nnoremenu Branch.LazyGit <cmd>LazyGit<CR>
+
+            nnoremenu File.Explorer <cmd>CocCommand explorer<CR>
+            nnoremenu File.Workspaces <cmd>Telescope workspaces<cr>
+            nnoremenu File.Zen\ Mode <cmd>ZenMode<cr>
+            nnoremenu File.Undo\ History <cmd>UndotreeToggle<cr>
+            nnoremenu File.Close\ Others <cmd>BufferLineCloseOthers<cr>
+            nnoremenu File.Save <cmd>w<cr>
+
+            nnoremenu PythonVenv.Conda\ Activate <cmd>CondaActivate<cr>
+            nnoremenu PythonVenv.Conda\ Deactivate <cmd>CondaDeactivate<CR>
+
+            nnoremenu MusicIsPlaying.Play <cmd>PlayMusic<cr>
+            nnoremenu MusicIsPlaying.Stop <cmd>StopMusic<cr>
+            nnoremenu MusicIsPlaying.Next <cmd>PlayMusicNext<cr>
+            nnoremenu MusicIsPlaying.Prev <cmd>PlayMusicPrev<cr>
+            nnoremenu MusicIsPlaying.Pause <cmd>PlayMusicPause<cr>
+
+            nnoremenu MusicIsNotPlaying.Play <cmd>PlayMusic<CR>
+
+            nnoremenu Copilot.Toggle\ Chat <cmd>CopilotChatToggle<cr>
+            nnoremenu Copilot.Explain <cmd>CopilotChatExplain<cr>
+            nnoremenu Copilot.Fix <cmd>CopilotChatFix<cr>
+        ]]
+        -- For click popup-menus end
+
         opts = {
             options = {
                 globalstatus = true,
@@ -113,6 +149,9 @@ return {
                         icons_enabled = true,
                         fmt = function(str) return str:sub(1, 1) end,
                         color = { bg = 'bg', fg = '#7dcfff' },
+                        on_click = function()
+                            vim.cmd('popup! Colorscheme')
+                        end
                     }
                 },
                 lualine_b = {
@@ -120,7 +159,7 @@ return {
                         'branch',
                         color = { bg = 'bg', fg = '#ff9e64' },
                         on_click = function()
-                            vim.cmd('Flogsplit')
+                            vim.cmd('popup! Branch')
                         end
                     },
                     {
@@ -150,8 +189,9 @@ return {
                         separator = "",
                         padding = { left = 1, right = 0 },
                         icon = { align = 'right' },
+                        color = { bg = 'bg', fg = '#a9b1d6' },
                         on_click = function()
-                            vim.cmd("CocCommand explorer")
+                            vim.cmd("popup! File")
                         end
                     },
                     {
@@ -163,15 +203,18 @@ return {
                             unnamed = '[Unnamed]', -- Text to show for unnamed buffers.
                             newfile = '', -- Text to show for newly created file before first write
                         },
+                        color = { bg = 'bg', fg = '#a9b1d6' },
                         on_click = function()
-                            vim.cmd("CocCommand explorer")
+                            vim.cmd("popup! File")
                         end
                     },
                     {
                         function()
                             local filetype = vim.bo.filetype
-                            local types = { 'c', 'cpp', 'python', 'markdown', 'tex', 'lua' }
-                            if is_in_tbl(filetype, types) then
+                            local types = { 'c', 'cpp', 'python', 'tex', 'lua' }
+                            if filetype == "markdown" then
+                                return ""
+                            elseif is_in_tbl(filetype, types) then
                                 return ""
                             else
                                 return ''
@@ -210,7 +253,7 @@ return {
                         python_venv,
                         padding = { left = 1, right = 0 },
                         on_click = function()
-                            vim.cmd('Condac')
+                            vim.cmd('popup! PythonVenv')
                         end,
                         color = { bg = "bg", fg = "#7dcfff" }
                     },
@@ -243,9 +286,9 @@ return {
                         on_click = function()
                             local is_playing = vim.fn.system("pgrep mpv")
                             if is_playing ~= "" then
-                                vim.cmd('StopMusic')
+                                vim.cmd('popup! MusicIsPlaying')
                             else
-                                vim.cmd('PlayMusic')
+                                vim.cmd('popup! MusicIsNotPlaying')
                             end
                         end
                     },
@@ -292,14 +335,24 @@ return {
                         color = { bg = 'bg', fg = "#7aa2f7" },
                         padding = { left = 1, right = 1 },
                         on_click = function()
-                            vim.cmd('CopilotChatToggle')
+                            vim.cmd('popup! Copilot')
+                        end
+                    },
+                    {
+                        function()
+                            return "󰡨"
+                        end,
+                        color = { bg = 'bg', fg = '#7dcfff' },
+                        padding = { left = 1, right = 1 },
+                        on_click = function()
+                            vim.cmd('lua require("telescope").extensions.docker.docker()')
                         end
                     },
                     {
                         function()
                             return " " .. os.date("%R")
                         end,
-                        color = { bg = "bg", fg = "#c3e88d" },
+                        color = { bg = "bg", fg = "#41a6b5" },
                         on_click = function()
                             print("Time now: " .. os.date() .. "\n")
                         end

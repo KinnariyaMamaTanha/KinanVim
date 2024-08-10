@@ -44,7 +44,8 @@ local mappings = {
     { from = "“", to = "“”<LEFT>", mode = mode_i },
     { from = "<C-a>", to = "<S-left>", mode = mode_c },
     { from = "<C-e>", to = "<S-right>", mode = mode_c },
-    { from = "VV", to = "<C-q>", mode = mode_n }
+    { from = "VV", to = "<C-q>", mode = mode_n },
+    { from = "<leader>ci", to = "<cmd>normal gcc<cr>", mode = mode_nv }
 }
 
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })

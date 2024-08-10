@@ -36,7 +36,8 @@ return {
             let g:vimtex_view_general_viewer = '/mnt/c/Users/自驾游/AppData/Local/SumatraPDF/SumatraPDF.exe'
             let g:vimtex_view_general_options = '-reuse-instance -forward-search @tex @line @pdf'
 
-            let g:vimtex_cache_root = '.cache'
+            " TODO: Change the path to yours
+            let g:vimtex_cache_root = '~/.cache/nvim/vimtex'
             let g:vimtex_cache_persistent = 1
 
             " latexmk settings

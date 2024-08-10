@@ -19,28 +19,22 @@ return {
             { "<F5>", "<cmd>lua Compile_and_run_single_file()<CR>" }
         },
         cmd = { "RunFile" },
-        config = function()
-            -- Map <F5> to call Compile_and_run_single_file function
-            vim.api.nvim_set_keymap('n', '<F5>', '<cmd>lua Compile_and_run_single_file()<CR>',
-                { noremap = true, silent = true })
-
-            require('code_runner').setup({
-                filetype = {
-                    python = "python",
-                    c = {
-                        "cd $dir &&",
-                        "gcc $fileName -g -o $fileNameWithoutExt &&",
-                        "$dir/$fileNameWithoutExt"
-                    },
-                    cpp = {
-                        "cd $dir &&",
-                        "g++ $fileName -g -o $fileNameWithoutExt &&",
-                        "$dir/$fileNameWithoutExt"
-                    },
-                    bash = "bash $filename"
+        opts = {
+            filetype = {
+                python = "python",
+                c = {
+                    "cd $dir &&",
+                    "gcc $fileName -g -o $fileNameWithoutExt &&",
+                    "$dir/$fileNameWithoutExt"
                 },
-            })
-        end
+                cpp = {
+                    "cd $dir &&",
+                    "g++ $fileName -g -o $fileNameWithoutExt &&",
+                    "$dir/$fileNameWithoutExt"
+                },
+                bash = "bash $filename"
+            },
+        }
     },
     {
         "michaelb/sniprun",

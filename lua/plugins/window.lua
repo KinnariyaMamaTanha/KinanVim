@@ -33,7 +33,7 @@ return {
                         height = 0.85,
                     },
                     -- NOTE: check :help nvim_open_win() for possible border values.
-                    border = "none" -- 'thicc', -- this is a preset, try it :)
+                    border = "thicc" -- 'thicc', -- this is a preset, try it :)
                 },
                 presets = {
                     {
@@ -51,7 +51,6 @@ return {
                     },
                 },
             }
-            vim.keymap.set('n', 'f<CR>', function() vim.cmd('NeoZoomToggle') end, { silent = true, nowait = true })
             vim.api.nvim_create_autocmd({ 'WinEnter' }, {
                 callback = function()
                     local zoom_book = require('neo-zoom').zoom_book
