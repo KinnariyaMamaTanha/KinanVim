@@ -53,10 +53,14 @@ return {
         -- Use <c-space> to trigger completion
         keyset("i", "<c-space>", "coc#refresh()", { silent = true, expr = true })
         -- GoTo code navigation
-        keyset("n", "gpd", "<cmd>call CocAction('jumpDefinition', v:false)<cr>", { silent = true })
-        keyset("n", "gpy", "<cmd>call CocAction('jumpTypeDefinition', v:false)<cr>", { silent = true })
-        keyset("n", "gpi", "<cmd>call CocAction('jumpImplementation', v:false)<cr>", { silent = true })
-        keyset("n", "gpr", "<cmd>call CocAction('jumpReferences', v:false)<cr>", { silent = true })
+        keyset("n", "gpd", "<cmd>call CocAction('jumpDefinition', v:false)<cr>",
+            { silent = true, desc = "Preview Definition" })
+        keyset("n", "gpy", "<cmd>call CocAction('jumpTypeDefinition', v:false)<cr>",
+            { silent = true, desc = "Preview Type Definition" })
+        keyset("n", "gpi", "<cmd>call CocAction('jumpImplementation', v:false)<cr>",
+            { silent = true, desc = "Preview Implementation" })
+        keyset("n", "gpr", "<cmd>call CocAction('jumpReferences', v:false)<cr>",
+            { silent = true, desc = "Preview References" })
         keyset("n", "gd", "<Plug>(coc-definition)", { silent = true })
         keyset("n", "gy", "<Plug>(coc-type-definition)", { silent = true })
         keyset("n", "gi", "<Plug>(coc-implementation)", { silent = true })

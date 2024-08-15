@@ -1,5 +1,5 @@
 return {
     "makerj/vim-pdf",
-    ft = "pdf",
+    event = "BufReadPre *.pdf",
     config = function() end
 }

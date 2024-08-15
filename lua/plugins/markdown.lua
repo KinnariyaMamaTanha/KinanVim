@@ -42,6 +42,6 @@ return {
             { "MT", "<cmd>lua require('nabla').popup()<CR>", mode = "n", { silent = true, noremap = true } }
         },
         dependencies = { "nvim-treesitter/nvim-treesitter" },
-        opts = {}
+        config = function() end
     },
 }

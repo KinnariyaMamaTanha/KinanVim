@@ -1,4 +1,9 @@
 {
+    "bashIde.shfmt.simplifyCode": true,
+    "semanticTokens.enable": false,
+    "refactor.openCommand": "vsplit",
+    "refactor.saveToFile": true,
+    "refactor.showMenu": "<Tab>",
     "clangd.disableProgressNotifications": true,
     "clangd.disableFileStatus": true,
     "clangd.showDBChangedNotification": false,
@@ -65,11 +70,21 @@
         "border": true,
         "rounded": true
     },
+    "outline.keepWindow": true,
+    "outline.togglePreviewKey": "<C-p>",
+    "outline.splitCommand": "botright 40vs",
+    "outline.expandLevel": 1,
+    "outline.autoWidth": true,
     "outline.sortBy": "position",
     "outline.previewWinblend": 20,
     "outline.previewBorderRounded": true,
     "outline.autoPreview": true,
     "tree.key.close": "<C-q>",
+    "tree.key.collapseAll": "C",
+    "tree.key.toggle": "<space>",
+    "tree.key.invoke": "<cr>",
+    "tree.closedIcon": "",
+    "tree.openedIcon": "",
     "texlab.chktex.onOpenAndSave": true,
     "markdown-preview-enhanced.enableScriptExecution": true,
     "markdown-preview-enhanced.enableHTML5Embed": true,
@@ -356,6 +371,11 @@
         "dataset/*"
     ],
     "pydocstring.enableFileAction": true,
+    "snippets.extends": {
+        "cpp": [
+            "c"
+        ]
+    },
     "inlayHint.enable": false,
     "yank.highlight.duration": 200,
     "workspace.rootPatterns": [
@@ -367,4 +387,5 @@
     ],
     "list.floatPreview": true,
     "list.smartCase": true,
+    "list.alignColumns": true,
 }

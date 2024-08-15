@@ -16,19 +16,23 @@ return {
                     transparent = true,
                 },
                 highlights = {
-                    ["@variable.python"] = { fg = '$red' },
+                    -- ["@variable.python"] = { fg = '$red' },
+                    ["@variable.bash"] = { fg = '$red' },
                     ["@operator.python"] = { fg = '$cyan' },
+                    ["@operator.bash"] = { fg = '$cyan' },
                     ["@operator.c"] = { fg = '$purple' },
                     ["@string.escape.python"] = { fg = '$cyan' },
                     ["@function.call.python"] = { fg = '$blue' },
-                    ["@constructor.python"] = { fg = '$cyan' },
+                    ["@constructor.python"] = { fg = '$blue' },
                     ["@variable.member.python"] = { fg = '$cyan' },
                     ["@type.builtin.python"] = { fg = '$yellow' },
-                    ["@variable.builtin.python"] = { fg = '$yellow', fmt = 'italic' },
+                    ["@variable.builtin.python"] = { fg = '$yellow' },
                     ["@none.python"] = { fg = '$purple' },
                     ["@markup.strong"] = { fg = '$orange', fmt = 'bold' },
                     ["@markup.italic"] = { fg = '#7dcfff' },
                     ["@markup.math.latex"] = { fg = '$cyan' },
+                    ["CocSemTypeTypeParameter"] = { fg = '$yellow' },
+                    ["CocSemTypeVariable"] = { fg = "$red" },
                     DashboardFooter = { fg = '$purple', fmt = "italic" }
                 }
             }
@@ -50,11 +54,11 @@ return {
             underline_links = true,
         }
     },
-    {
-        "catppuccin/nvim",
-        name = "catppuccin",
-        lazy = true,
-    },
+    -- {
+    --     "catppuccin/nvim",
+    --     name = "catppuccin",
+    --     lazy = true,
+    -- },
     {
         "uga-rosa/ccc.nvim",
         cmd = {

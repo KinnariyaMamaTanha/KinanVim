@@ -1,3 +1,4 @@
+_G.Games = false
 require("config.global-settings")
 require("config.keymaps")
 require("config.plugins")

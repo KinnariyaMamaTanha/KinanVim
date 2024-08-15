@@ -1,7 +1,7 @@
 return {
     {
         "GCBallesteros/jupytext.nvim",
-        ft = "python",
+        event = "BufReadPre *.ipynb",
         opts = {
             style = "hydrogen",
             output_extension = "auto", -- Default extension. Don't change unless you know what you are doing

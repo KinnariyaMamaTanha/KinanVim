@@ -5,7 +5,23 @@ return {
         keys = {
             { "<C-l>", "<cmd>ZenMode<cr>" },
         },
-        config = function() end
+        opts = {
+            window = {
+                options = {
+                    foldcolumn = "0"
+                }
+            },
+            plugins = {
+                options = {
+                    enabled = true,
+                    ruler = false,
+                    showcmd = false,
+                    laststatus = 0,
+                },
+                gitsigns = { enabled = false },
+                todo = { enabled = false }
+            }
+        }
     },
     {
         "folke/twilight.nvim",

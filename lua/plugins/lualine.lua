@@ -103,7 +103,7 @@ return {
         vim.cmd [[
             nnoremenu Colorscheme.Onedark <cmd>colorscheme onedark<cr>
             nnoremenu Colorscheme.Tokyonight <cmd>colorscheme tokyonight<cr>
-            nnoremenu Colorscheme.Vscode <cmd>colorscheme vscode<cr>
+            nnoremenu Colorscheme.VSCode <cmd>colorscheme vscode<cr>
             nnoremenu Colorscheme.Catppuccin <cmd>colorscheme catppuccin<cr>
 
             nnoremenu Branch.Git\ Graph <cmd>Flogsplit<cr>
@@ -177,10 +177,7 @@ return {
                         sources = { 'coc' },
                         padding = { left = 0, right = 0 },
                         on_click = function()
-                            vim.cmd [[
-                                call coc#rpc#request('fillDiagnostics', [bufnr('%')])
-                                Trouble loclist
-                            ]]
+                            vim.cmd('CocDiagnostics')
                         end
                     },
                     {
@@ -359,7 +356,7 @@ return {
                     },
                 },
             },
-            extensions = { "fugitive", "man", "lazy", "nvim-dap-ui", "toggleterm", "trouble" }
+            extensions = { "fugitive", "man", "lazy", "nvim-dap-ui", "toggleterm" }
         }
         return opts
     end,
