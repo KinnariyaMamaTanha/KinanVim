@@ -1,3 +1,6 @@
+if not _G.Command_Completion then
+    return {}
+end
 return {
     {
         "hrsh7th/cmp-cmdline",

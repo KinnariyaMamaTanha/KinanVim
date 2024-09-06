@@ -1,3 +1,6 @@
+if not _G.Docker then
+    return {}
+end
 return {
     -- {
     --     "kkvh/vim-docker-tools",

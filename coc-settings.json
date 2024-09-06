@@ -1,4 +1,12 @@
 {
+    "pairs.enableCharacters": [
+        "(",
+        "[",
+        "{",
+        "'",
+        "\"",
+        "`"
+    ],
     "bashIde.shfmt.simplifyCode": true,
     "semanticTokens.enable": false,
     "refactor.openCommand": "vsplit",
@@ -85,13 +93,6 @@
     "tree.key.invoke": "<cr>",
     "tree.closedIcon": "",
     "tree.openedIcon": "",
-    "texlab.chktex.onOpenAndSave": true,
-    "markdown-preview-enhanced.enableScriptExecution": true,
-    "markdown-preview-enhanced.enableHTML5Embed": true,
-    "markdown-preview-enhanced.enableTypographer": true,
-    "markdown-preview-enhanced.mathjaxV3ScriptSrc": "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js",
-    "markdown-preview-enhanced.previewColorScheme": "selectedPreviewTheme",
-    "markdown-preview-enhanced.previewTheme": "github-light.css",
     "markdownlint.onChange": false,
     "markdownlint.config": {
         "default": true,
@@ -99,7 +100,6 @@
         "indentation": false,
         "no-inline-html": false
     },
-    "markdown-preview-enhanced.codeBlockTheme": "one-dark.css",
     "coc.preferences.extensionUpdateCheck": "daily",
     "coc.preferences.enableMessageDialog": true,
     "coc.preferences.enableLinkedEditing": true,

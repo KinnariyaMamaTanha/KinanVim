@@ -1,3 +1,6 @@
+if not _G.Copilot then
+    return {}
+end
 return {
     {
         "zbirenbaum/copilot.lua",

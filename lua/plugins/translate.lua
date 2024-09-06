@@ -1,3 +1,6 @@
+if not _G.Translator then
+    return {}
+end
 return {
     "potamides/pantran.nvim",
     keys = {

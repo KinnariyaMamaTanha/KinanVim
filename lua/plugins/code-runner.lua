@@ -5,7 +5,7 @@ _G.Compile_and_run_single_file = function()
     if filetype == 'c' or filetype == 'cpp' or filetype == 'python' then
         vim.cmd('RunFile')
     elseif filetype == 'markdown' then
-        vim.cmd('CocCommand markdown-preview-enhanced.openPreview')
+        vim.cmd("MarkdownPreview")
     elseif filetype == 'tex' then
         vim.cmd('VimtexCompile')
     elseif filetype == 'lua' then

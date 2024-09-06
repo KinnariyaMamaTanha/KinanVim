@@ -18,13 +18,17 @@ return {
             'coc-word',
             'coc-yank',
             'coc-pydocstring',
-            'coc-docker',
-            'coc-webview',
-            'coc-markdown-preview-enhanced',
             'coc-html',
-            'coc-texlab',
             'coc-pairs',
         }
+
+        if _G.LaTeX then
+            table.insert(vim.g.coc_global_extensions, "coc-vimtex")
+        end
+
+        if _G.Docker then
+            table.insert(vim.g.coc_global_extensions, "coc-docker")
+        end
 
         local keyset = vim.keymap.set
         -- Autocomplete
@@ -47,6 +51,13 @@ return {
         -- <C-g>u breaks current undo, please make your own choice
         keyset("i", "<cr>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]],
             opts)
+        vim.api.nvim_create_autocmd("FileType", {
+            pattern = "tex",
+            callback = function()
+                keyset("i", "<C-x>", "<Plug>(coc-snippets-expand)")
+            end
+        })
+
         -- Use <tab> and <S-tab> to jump between snippet placeholders
         vim.g.coc_snippet_next = "<tab>"
         vim.g.coc_snippet_prev = "<S-tab>"
@@ -137,10 +148,6 @@ return {
         keyset("n", "<leader>y", "<cmd>CocList -A --normal yank<CR>", { silent = true, noremap = true })
         -- " clean yank history
         keyset("n", "<leader>yc", "<cmd>CocCommand yank.clean<CR>", { silent = true, noremap = true })
-        ---------------------------------------
-        ---- coc-markdown-preview-enhanced ----
-        ---------------------------------------
-        keyset("n", "<C-m><C-k>", "<cmd>CocCommand markdown-preview-enhanced.openPreview<CR>", opts)
         --------------------
         ---- coc-texlab ----
         --------------------
@@ -149,5 +156,22 @@ return {
         ---- multiple cursors ----
         --------------------------
         keyset("n", "<C-c>", "<Plug>(coc-cursors-word)", opts)
+        -------------------
+        ---- coc-pairs ----
+        -------------------
+        vim.api.nvim_create_autocmd("FileType", {
+            pattern = "markdown",
+            callback = function()
+                vim.b.coc_pairs_disabled = { '`' }
+                vim.b.coc_pairs = { { "$", "$" } }
+            end
+        })
+
+        vim.api.nvim_create_autocmd("FileType", {
+            pattern = "tex",
+            callback = function()
+                vim.b.coc_pairs = { { "$", "$" } }
+            end
+        })
     end
 }

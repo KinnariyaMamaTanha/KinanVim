@@ -21,7 +21,7 @@
 - For C/C++:
     - gcc, g++, clangd(LSP), make, cmake, cmake-format(formatter), cmake-language-server(LSP), codelldb(debugger)
 - For LaTeX:
-    - texlive, texlab(LSP), latexindent(formatter), zathura on WSL2(not recommended) or SumatraPDF on host Windows located at `/mnt/c/Users/YourUserName/AppData/Local/SumatraPDF/SumatraPDF.exe`
+    - texlive, zathura on WSL2 or SumatraPDF on host Windows (should be in the path variable)
 - For Assembly:
     - asm-lsp(LSP), asmfmt(formatter)
 - For PDF:
@@ -96,6 +96,7 @@ nvim
 - [hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
 - [HiPhish/rainbow-delimiters.nvim](https://github.com/HiPhish/rainbow-delimiters.nvim)
 - [iqxd/vim-mine-sweeping](https://github.com/iqxd/vim-mine-sweepin)
+- [iamcco/markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim)
 - [itchyny/calendar.vim](https://github.com/itchyny/calendar.vim)
 - [jbyuki/nabla.nvim](https://github.com/jbyuki/nabla.nvim)
 - [lpoto/telescope-docker.nvim](https://github.com/lpoto/telescope-docker.nvim)
@@ -153,20 +154,17 @@ nvim
 
 - [bigshans/coc-word](https://github.com/bigshans/coc-word)
 - [clangd/coc-clangd](https://github.com/clangd/coc-clangd)
-- [fannheyward/coc-ecdict](https://github.com/fannheyward/coc-ecdict)
 - [fannheyward/coc-markdownlint](https://github.com/fannheyward/coc-markdownlint)
 - [fannheyward/coc-pyright](https://github.com/fannheyward/coc-pyright)
-- [fannheyward/coc-texlab](https://github.com/fannheyward/coc-texlab)
 - [josa42/coc-docker](https://github.com/josa42/coc-docker)
 - [josa42/coc-sh](https://github.com/josa42/coc-sh)
 - [neoclide/coc-html](https://github.com/neoclide/coc-html)
 - [neoclide/coc-json](https://github.com/neoclide/coc-json)
 - [neoclide/coc-pairs](https://github.com/neoclide/coc-pairs)
 - [neoclide/coc-snippets](https://github.com/neoclide/coc-snippets)
+- [neoclide/coc-vimtex](https://github.com/neoclide/coc-vimtex)
 - [neoclide/coc-yank](https://github.com/neoclide/coc-yank)
 - [weirongxu/coc-explorer](https://github.com/weirongxu/coc-explorer)
-- [weirongxu/coc-markdown-preview-enhanced](https://github.com/weirongxu/coc-markdown-preview-enhanced)
-- [weirongxu/coc-webview](https://github.com/weirongxu/coc-webview)
 - [yaegassy/coc-pydocstring](https://github.com/yaegassy/coc-pydocstring)
 
 </details>

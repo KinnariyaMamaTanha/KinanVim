@@ -1,3 +1,6 @@
+if not _G.Notify then
+    return {}
+end
 return {
     "folke/noice.nvim",
     opts = {

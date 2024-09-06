@@ -1,8 +1,8 @@
 return {
     "fedepujol/move.nvim",
     keys = {
-        { '<A-Down>', ':MoveLine(1)<CR>',  mode = { 'n', 'v' }, { noremap = true, silent = true } },
-        { '<A-Up>',   ':MoveLine(-1)<CR>', mode = { 'n', 'v' }, { noremap = true, silent = true } },
+        { '<A-Down>', '<cmd>MoveLine(1)<CR>',  mode = { 'n', 'v' }, { noremap = true, silent = true } },
+        { '<A-Up>',   '<cmd>MoveLine(-1)<CR>', mode = { 'n', 'v' }, { noremap = true, silent = true } },
     },
     opts = {
         line = {

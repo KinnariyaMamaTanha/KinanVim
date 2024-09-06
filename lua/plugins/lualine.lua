@@ -321,6 +321,9 @@ return {
                     },
                     {
                         function()
+                            if not _G.Copilot then
+                                return ''
+                            end
                             local filetype = vim.bo.filetype
                             local types = { 'c', 'cpp', 'python', 'sh' }
                             if is_in_tbl(filetype, types) then

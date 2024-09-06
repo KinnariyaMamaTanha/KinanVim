@@ -1,3 +1,6 @@
+if not _G.LaTeX then
+    return {}
+end
 return {
     "lervag/vimtex",
     lazy = false,
@@ -32,12 +35,12 @@ return {
             " Most VimTeX mappings rely on localleader and this can be changed with the
             " following line. The default is usually fine and is the symbol "\".
 
-            " TODO: The username 自驾游 is my user name. You need to replace it with your username!!!
-            let g:vimtex_view_general_viewer = '/mnt/c/Users/自驾游/AppData/Local/SumatraPDF/SumatraPDF.exe'
+            " TODO: Add SumatraPDF.exe to your Windows path first
+            let g:vimtex_view_general_viewer = 'SumatraPDF.exe'
             let g:vimtex_view_general_options = '-reuse-instance -forward-search @tex @line @pdf'
 
             " TODO: Change the path to yours
-            let g:vimtex_cache_root = '~/.cache/nvim/vimtex'
+            let g:vimtex_cache_root = '/home/kinnariya/.cache/nvim/vimtex'
             let g:vimtex_cache_persistent = 1
 
             " latexmk settings

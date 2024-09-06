@@ -1,3 +1,6 @@
+if not _G.Notebook then
+    return {}
+end
 return {
     {
         "GCBallesteros/jupytext.nvim",
