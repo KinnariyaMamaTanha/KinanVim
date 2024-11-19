@@ -12,7 +12,6 @@ return {
             'coc-json',
             'coc-pyright',
             'coc-clangd',
-            'coc-markdownlint',
             'coc-explorer',
             'coc-snippets',
             'coc-word',
@@ -125,7 +124,6 @@ return {
         ----------------------
         ---- coc-explorer ----
         ----------------------
-        keyset("n", "<leader>e", "<cmd>CocCommand explorer<CR>", { silent = true, noremap = true })
         keyset("n", "<F2>", "<cmd>CocCommand explorer<CR>", { silent = true, noremap = true })
         ------------------------
         ---- rename symbols ----

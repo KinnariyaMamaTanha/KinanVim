@@ -1,3 +1,4 @@
+vim.api.nvim_set_option("clipboard", "unnamedplus")
 vim.o.number = true
 vim.o.relativenumber = true
 vim.o.foldmethod = "indent"
@@ -6,8 +7,8 @@ vim.o.foldlevelstart = 99
 vim.o.foldenable = true
 vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
 vim.o.foldcolumn = '1'
-vim.o.scrolloff = 5
-vim.o.sidescrolloff = 4
+-- vim.o.scrolloff = 5
+-- vim.o.sidescrolloff = 4
 vim.o.cursorline = true
 -- vim.o.cursorcolumn = true
 vim.o.compatible = false
@@ -172,4 +173,12 @@ vim.api.nvim_create_autocmd({ "VimEnter" }, {
         end
     end,
     group = ts_group,
+})
+
+
+vim.api.nvim_create_autocmd("BufReadPost", {
+    pattern = "*.code-workspace",
+    callback = function()
+        vim.cmd("set filetype=json")
+    end,
 })

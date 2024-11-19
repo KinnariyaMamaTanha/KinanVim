@@ -1,3 +1,6 @@
+if not _G.UI.Dropbar then
+    return {}
+end
 return {
     "Bekaboo/dropbar.nvim",
     event = "VeryLazy",

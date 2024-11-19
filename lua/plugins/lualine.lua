@@ -240,7 +240,13 @@ return {
                         end
                     },
                     {
-                        get_wakatime,
+                        function()
+                            if _G.Wakatime then
+                                return get_wakatime
+                            else
+                                return ''
+                            end
+                        end,
                         icon = "󱑆",
                         color = { bg = 'bg', fg = '#41a6b5' }
                     }
@@ -276,7 +282,11 @@ return {
                 lualine_z = {
                     {
                         function()
-                            return ''
+                            if _G.Music then
+                                return ''
+                            else
+                                return ''
+                            end
                         end,
                         color = { bg = 'bg', fg = '#ff007c' },
                         padding = { left = 1, right = 1 },
@@ -291,7 +301,11 @@ return {
                     },
                     {
                         function()
-                            return "󰄀"
+                            if _G.CodeSnap then
+                                return "󰄀"
+                            else
+                                return ''
+                            end
                         end,
                         color = { bg = 'bg', fg = "#ff9e64" },
                         padding = { left = 1, right = 1 },
@@ -311,7 +325,11 @@ return {
                     },
                     {
                         function()
-                            return ""
+                            if _G.Calendar then
+                                return ""
+                            else
+                                return ''
+                            end
                         end,
                         color = { bg = 'bg', fg = "#41a6b5" },
                         padding = { left = 1, right = 1 },
@@ -340,7 +358,11 @@ return {
                     },
                     {
                         function()
-                            return "󰡨"
+                            if _G.Docker then
+                                return "󰡨"
+                            else
+                                return ''
+                            end
                         end,
                         color = { bg = 'bg', fg = '#7dcfff' },
                         padding = { left = 1, right = 1 },

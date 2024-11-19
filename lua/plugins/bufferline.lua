@@ -1,3 +1,6 @@
+if not _G.UI.Bufferline then
+    return {}
+end
 return {
     'akinsho/bufferline.nvim',
     version = "*",

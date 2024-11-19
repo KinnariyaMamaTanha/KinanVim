@@ -1,3 +1,6 @@
+if not _G.UI.Windows then
+    return {}
+end
 return {
     {
         "nvim-zh/colorful-winsep.nvim",

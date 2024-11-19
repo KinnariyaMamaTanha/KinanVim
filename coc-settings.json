@@ -93,13 +93,6 @@
     "tree.key.invoke": "<cr>",
     "tree.closedIcon": "",
     "tree.openedIcon": "",
-    "markdownlint.onChange": false,
-    "markdownlint.config": {
-        "default": true,
-        "line_length": false,
-        "indentation": false,
-        "no-inline-html": false
-    },
     "coc.preferences.extensionUpdateCheck": "daily",
     "coc.preferences.enableMessageDialog": true,
     "coc.preferences.enableLinkedEditing": true,
@@ -110,6 +103,7 @@
         "markdown",
         "text",
         "gitcommit",
+        "yaml",
     ],
     "suggest.formatItems": [
         "kind",
@@ -173,7 +167,7 @@
     "diagnostic.hintSign": "󰌵",
     "diagnostic.checkCurrentLine": true,
     "diagnostic.virtualTextPrefix": " □ ",
-    "diagnostic.virtualText": true,
+    "diagnostic.virtualText": false,
     "diagnostic.virtualTextCurrentLineOnly": false,
     "diagnostic.messageDelay": 10,
     "diagnostic.virtualTextLimitInOneLine": 2,
@@ -362,8 +356,8 @@
     "python.analysis.diagnosticMode": "openFilesOnly",
     "python.analysis.typeCheckingMode": "off",
     "python.formatting.provider": "black",
-    "python.linting.pycodestyleEnabled": true,
-    "python.linting.pydocstyleEnabled": true,
+    "python.linting.pycodestyleEnabled": false,
+    "python.linting.pydocstyleEnabled": false,
     "pyright.testing.provider": "pytest",
     "python.linting.ignorePatterns": [
         ".vscode/*.py",
@@ -388,4 +382,5 @@
     "list.floatPreview": true,
     "list.smartCase": true,
     "list.alignColumns": true,
+    "snippets.ultisnips.pythonPrompt": false,
 }

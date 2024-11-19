@@ -1,3 +1,6 @@
+if not _G.CodeSnap then
+    return {}
+end
 local path = vim.fn.expand("~/Pictures")
 if vim.fn.isdirectory(path) == 0 then
     vim.fn.mkdir(path)

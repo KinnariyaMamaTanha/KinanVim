@@ -16,11 +16,12 @@ return {
                     transparent = true,
                 },
                 highlights = {
-                    -- ["@variable.python"] = { fg = '$red' },
+                    ["@variable.python"] = { fg = '$red' },
                     ["@variable.bash"] = { fg = '$red' },
                     ["@operator.python"] = { fg = '$cyan' },
                     ["@operator.bash"] = { fg = '$cyan' },
                     ["@operator.c"] = { fg = '$purple' },
+                    ["@operator.cpp"] = { fg = '$purple' },
                     ["@string.escape.python"] = { fg = '$cyan' },
                     ["@function.call.python"] = { fg = '$blue' },
                     ["@constructor.python"] = { fg = '$blue' },
