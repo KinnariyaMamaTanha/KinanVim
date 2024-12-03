@@ -57,9 +57,6 @@ return {
             end
         })
 
-        -- Use <tab> and <S-tab> to jump between snippet placeholders
-        vim.g.coc_snippet_next = "<tab>"
-        vim.g.coc_snippet_prev = "<S-tab>"
         -- Use <c-space> to trigger completion
         keyset("i", "<c-space>", "coc#refresh()", { silent = true, expr = true })
         -- GoTo code navigation
@@ -94,7 +91,7 @@ return {
         keyset("n", "K", '<CMD>lua _G.show_docs()<CR>', { silent = true })
         -- Apply codeAction to the selected region
         -- Example: `<leader>aap` for current paragraph
-        local opts = { silent = true, nowait = true }
+        opts = { silent = true, nowait = true }
         -- Add `:Format` command to format current buffer
         vim.api.nvim_create_user_command("Format", "call CocAction('format')", {})
         -- Add `:Fold` command to fold current buffer

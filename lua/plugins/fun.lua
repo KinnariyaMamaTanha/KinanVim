@@ -29,6 +29,10 @@ if _G.Games then
                 -- TODO: Replace with your favorite path
                 scores_path = "/home/kinnariya/.cache/nvim/blackjack_scores.json"
             }
+        },
+        {
+            "vim/killersheep",
+            cmd = { "Kill", "KillKillKill" }
         }
     }
 else

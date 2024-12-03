@@ -8,16 +8,19 @@ return {
                 code_style = {
                     comments = 'italic',
                     keywords = 'none',
-                    functions = 'none',
+                    functions = 'bold',
                     strings = 'none',
                     variables = 'none'
                 },
+                transparent = true,
                 lualine = {
                     transparent = true,
                 },
+                style = "darker",
                 highlights = {
                     ["@variable.python"] = { fg = '$red' },
                     ["@variable.bash"] = { fg = '$red' },
+                    ["@variable.lua"] = { fg = '$red' },
                     ["@operator.python"] = { fg = '$cyan' },
                     ["@operator.bash"] = { fg = '$cyan' },
                     ["@operator.c"] = { fg = '$purple' },
@@ -34,6 +37,8 @@ return {
                     ["@markup.math.latex"] = { fg = '$cyan' },
                     ["CocSemTypeTypeParameter"] = { fg = '$yellow' },
                     ["CocSemTypeVariable"] = { fg = "$red" },
+                    ["CocFloating"] = { bg = "$grey" },
+                    ["CocErrorFloat"] = { bg = "$grey" },
                     DashboardFooter = { fg = '$purple', fmt = "italic" }
                 }
             }

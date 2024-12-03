@@ -2,7 +2,7 @@
 _G.Games = false
 _G.Music = false
 _G.Calendar = false
-_G.Copilot = false
+_G.Copilot = true
 _G.Notify = true
 _G.Search = false
 _G.Command_Completion = false

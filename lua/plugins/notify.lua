@@ -8,7 +8,8 @@ return {
         require('notify').setup {
             timeout = 2000,
             render = "wrapped-compact",
-            stages = "fade"
+            stages = "fade",
+            background_colour = "#000000",
         }
         -- coc integration
         local coc_status_record = {}
